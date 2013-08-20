@@ -7,7 +7,7 @@ class PagesController < ApplicationController
 
   def archive
   end
-  
-  def about
+
+  def pi
   end
 end

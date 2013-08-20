@@ -1,4 +1,14 @@
 Openmicrosite::Application.routes.draw do
+
+  devise_for :users
+
+  root :to => 'pages#home'
+  get 'live' => 'pages#live'  
+  get 'archive' => 'pages#archive'
+  get 'pi' => 'pages#pi'
+  get 'login' => 'pages#login'
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
