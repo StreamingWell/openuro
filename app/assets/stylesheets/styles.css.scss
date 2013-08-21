@@ -152,6 +152,10 @@ body{
     border-color: none !important;
 }
 
+.registration_box {
+  min-width: 20%;
+}
+
 .message_box {
   width: 100%;
 }
@@ -161,7 +165,7 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
     border: 1px solid rgb(204, 204, 204);
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
     transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
-    width:70%;
+    min-width:70%;
 }
 
 p strong {
