@@ -7,6 +7,7 @@ body{
     padding-top: 0px;
 
     color: rgb(135, 135, 133);
+
 }
 
 @import 'bootstrap-responsive';
@@ -67,6 +68,48 @@ body{
 	background-image: url('bird_oncology orange.jpg');
 	background-repeat: no-repeat;
 	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1);
+}
+
+.jumbotron h4 {
+  font-weight: 100;
+}
+
+.login {
+	text-align: left !important;
+ 	margin:0 auto;
+	float:none;
+	padding-right: 125px;
+}
+
+.form-horizontal {
+	margin-left: -50px;
+	margin-top: 30px;
+}
+
+.form-horizontal .btn-primary {
+    color: white;
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+    background-color: rgb(167, 43, 77);
+    background-image: none !important;
+    background-repeat: none !important;
+    border-color: none !important;
+}
+
+.form-horizontal .btn-primary:hover {
+    color: white;
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+    background-color: rgb(167, 0, 77);
+    background-image: none !important;
+    background-repeat: none !important;
+    border-color: none !important;
+}
+
+.form-actions {
+    padding: 0px 20px 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: transparent;
+    border-top: none;
 }
 
 .btn {
