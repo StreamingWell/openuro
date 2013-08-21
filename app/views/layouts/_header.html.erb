@@ -13,14 +13,11 @@
 
         <div class="nav-collapse pull-right">
           <ul class="nav">
-            <li>
-              <%= link_to "Home", root_path %>
-            </li> 
              <li>
-              <%= link_to "Live", live_path %>
+              <%= link_to "Live Webcasts", live_path %>
             </li>
             <li>
-							<%= link_to "Archive", archive_path %>
+							<%= link_to "Archived Webcasts", archive_path %>
 						</li>	
 						<li>
 							<%= link_to "Prescribing Information", pi_path %>
@@ -31,6 +28,7 @@
               <% else %>
           <div class="nav-collapse pull-right">
               <ul class="nav">
+                <li><%= link_to "Register", home_path %></li>
                 <li><%= link_to "Login", login_path %></li>
               <% end %>
             </ul>

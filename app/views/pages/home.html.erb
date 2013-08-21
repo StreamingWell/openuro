@@ -2,16 +2,25 @@
 	<h1>Astellas Oncology LIVE Lunchtime Webinars</h1>
 	<h4><i>A multidisciplinary approach to prostate cancer understanding and management</i></h4>
 
+	<br>
+	<h4>To register for this webinar series please complete the following information:</h4>
+	<h4>Are you a healthcare professional? Please select either yes or no:</h4>
+	## INSERT CHECKBOXES ##
 	<div class="login span3">
 <%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), html: { class: 'form-horizontal'}) do |f| %>
     <%= f.input :name, :required => false, :autofocus => true %>
     <%= f.input :email, :required => false, :autofocus => true %>
+    <%= f.input :company, :required => false, :autofocus => true, label: "Place of Work" %>
+    <%= f.input :job, :required => false, :autofocus => true, label: "Job Title" %>
     <%= f.input :password, :required => false %>
     <%= f.input :password_confirmation, :required => true %>
+    ## INSERT TICK BOX ## 
+	Please tick this box if you permit two reminder emails to be sent to you prior to each live webinar and also again once each webinar has been archived for viewing on the website.</p>
     <div class="form-actions">
     <%= f.button :submit, "Register", class: 'btn btn-primary btn-large' %>
 </div>
 <% end %>
 </div>
 
+	<p><strong>XTANDI&trade;</strong> Prescribing information can be found <%= link_to 'here', pi_path %>.</p>
 </div>

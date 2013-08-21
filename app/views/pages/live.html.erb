@@ -20,14 +20,16 @@
 		Please submit a question in the box below:
 	</p>
 
-	Question Box
-
+	<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+	    <div class="message_box">
+	    	<%= f.text_area :name, :required => true, :size => 'rows = 5' %>
+	    </div>
+	    <div class="form-actions">
+	    <%= f.button :submit, "Send", class: 'btn btn-primary btn-large' %>
+	</div>
+	<% end %>
 	<p>
 		Please note, this webinar will last up to 45 minutes and will be available to view, at a later date, by registered users post the event on the archive page.
-	</p>
-
-	<p>
-		<strong>XTANDI&trade;</strong> Prescribing information can be found <%= link_to 'here', pi_path %>.
 	</p>
 
 	Archived webinars icon
