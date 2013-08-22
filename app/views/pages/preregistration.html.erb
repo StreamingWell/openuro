@@ -1,6 +1,18 @@
-<div class="jumbotron">
-	<h1>Astellas Oncology LIVE Lunchtime Webinars</h1>
-	<h4><i>A multidisciplinary approach to prostate cancer understanding and management</i></h4>
+<% if user_signed_in? %>
+	<div class="jumbotron">
+		<h1>Astellas Oncology LIVE Lunchtime Webinars</h1>
+		<h4><i>A multidisciplinary approach to prostate cancer understanding and management</i></h4>
 		<br>
-	<h3>Please select whether you would like to <%= link_to 'register', home_path %> or <%= link_to 'login', login_path %></h3>
-</div>
+		<p>Please login on *insert time and date* to watch *insert name(s)* from *insert place of work*present a live webinar entitled:</p>
+		<h3><span style="color: #A72B4D">*Webinar Title*</span></h3>
+	</div>
+<% else %>
+
+	<div class="jumbotron">
+		<h1>Astellas Oncology LIVE Lunchtime Webinars</h1>
+		<h4><i>A multidisciplinary approach to prostate cancer understanding and management</i></h4>
+			<br>
+		<h3>Please select whether you would like to <%= link_to 'register', home_path %> or <%= link_to 'login', login_path %></h3>
+	</div>
+
+<% end %>
