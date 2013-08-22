@@ -61,5 +61,19 @@ module Openmicrosite
 
     # Required for Devise on Heroku
     config.assets.initialize_on_precompile = false
+
+    config.action_mailer.smtp_settings = {
+      :address              => "smtp.mandrillapp.com",
+      :port                 => 587,
+      :domain               => "localhost:3000",
+      :user_name            => "app17619065@heroku.com",
+      :password             => "pnHua4WntMuoYdhCnpS4Yg",
+      :authentication       => :plain,
+      :enable_starttls_auto => true
+    }
+
+    config.action_mailer.default_url_options = {
+      :host => "localhost:3000"
+    }
   end
 end

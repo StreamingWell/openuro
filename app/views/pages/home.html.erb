@@ -15,8 +15,9 @@
     <%= f.input :job, :required => true, :autofocus => true, label: "Job Title" %>
     <%= f.input :password, :required => true %>
     <%= f.input :password_confirmation, :required => true %>
-    ## INSERT TICK BOX ## 
-	Please tick this box if you permit two reminder emails to be sent to you prior to each live webinar and also again once each webinar has been archived for viewing on the website.</p>
+    	<div class= "checkbox">
+    		Please tick this box if you permit two reminder emails to be sent to you prior to each live webinar and also again once each webinar has been archived for viewing on the website. <%= f.input :reminder, :as => :boolean, label: "Tick here", :input_html => { :checked => "checked" } %>
+    	</div>
     <div class="form-actions">
     <%= f.button :submit, "Register", class: 'btn btn-primary btn-large' %>
 </div>
