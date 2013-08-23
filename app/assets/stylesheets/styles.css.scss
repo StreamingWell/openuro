@@ -81,6 +81,7 @@ body{
 .jumbotron h4 i {
   font-weight: 100;
   color: rgb(167, 43, 77);
+  background: #fff;
 }
 
 .jumbotron h5 {
@@ -182,6 +183,7 @@ body{
 }
 
 .checkbox {
+    width: 100%;
 }
 
 textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
@@ -211,3 +213,10 @@ abbr[title], abbr[data-original-title] {
     padding-right: 10px;
 }
 
+.row {
+    margin-top: -20px;
+}
+
+.form-horizontal .control-group {
+    margin-bottom: 10px;
+}
