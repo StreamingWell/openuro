@@ -4,9 +4,9 @@ class Message
   include ActiveModel::Conversion
   extend ActiveModel::Naming
 
-  attr_accessor :name, :question
+  attr_accessor :name, :body
 
-  validates :name, :question, :presence => true
+  validates :name, :body, :presence => true
   
   def initialize(attributes = {})
     attributes.each do |name, value|
