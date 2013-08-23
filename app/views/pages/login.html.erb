@@ -1,15 +1,15 @@
 <div class="jumbotron">
 	<h1>Astellas Oncology LIVE Lunchtime Webinars</h1>
 	<h4><i>A multidisciplinary approach to prostate cancer understanding and management</i></h4>
-
-	<div class="login span3">
-<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), html: { class: 'form-horizontal'}) do |f| %>
-    <%= f.input :email, :required => true, :autofocus => true %>
-    <%= f.input :password, :required => true %>
-    <div class="form-actions">
-    <%= f.button :submit, "Login", class: 'btn btn-primary btn-large' %>
-</div>
+	<div class="row"> 
+		<div class="login span3">
+			<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), html: { class: 'form-horizontal'}) do |f| %>
+	    	<%= f.input :email, :required => true, :autofocus => true %>
+	    	<%= f.input :password, :required => true %>
+	    <div class="form-actions">
+	   		<%= f.button :submit, "Login", class: 'btn btn-primary btn-large' %>
+		</div>
 <% end %>
 </div>
-
+</div>
 </div>
