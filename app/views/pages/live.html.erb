@@ -15,15 +15,9 @@
 		Please submit a question in the box below:
 	</p>
 
-	<%= simple_form_for :message, :url => contact_path do |form| %>
-		 <%= simple_form_for(:message, :as => resource_name, :url => contact_path(resource_name), html: { class: 'form-horizontal'}) do |f| %>
-    <%= f.text_area :body, :required => true, :size => '30x5'  %>
-    <div class="form-actions">
-    <%= f.button :submit, "Send", class: 'btn btn-primary btn-large' %>
-</div>
-<% end %>
+		 <%= render 'pages/form' %>
 
-	<% end %>
+
 	<br>
 	<p>
 		Please note, this webinar will last up to 45 minutes and will be available to view, at a later date, by registered users post the event on the <%= link_to 'archive page', archive_path %>.
@@ -31,3 +25,6 @@
 <br>
 	<p><%= link_to 'Archived Webinars', archive_path, class: "btn btn-danger btn-small" %></p>
 </div>
+
+
+        <%= render 'layouts/footer' %>
