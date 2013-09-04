@@ -9,7 +9,7 @@ def new
     
     if @message.valid?
       NotificationsMailer.new_message(@message).deliver
-      flash[:notice] = "Message was successfully sent."
+      redirect_to(live_path, :notice => "Message was successfully sent.")
     else
       flash.now.alert = "Please fill all fields."
       render :new
