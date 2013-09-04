@@ -24,10 +24,25 @@ body{
     margin: 9px 10px 0px 0px;
 }
 
+.navbar .nav > li {
+    float: left;
+    background-color: rgb(167, 43, 77);
+    margin-right: 3px;
+    color: #fff;
+}
+
 .navbar .nav > li > a:focus, .navbar .nav > li > a:hover {
-    background-color: transparent;
-	  color: rgb(167, 43, 77);
+    background-color: #fff;
+    color: rgb(167, 43, 77);
     text-decoration: none;
+}
+
+.navbar .nav > li > a {
+    float: none;
+    padding: 10px 15px;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: none !important;
 }
 
 .navbar-inner{

@@ -9,7 +9,6 @@ Openmicrosite::Application.routes.draw do
   get 'home' => 'pages#home'
   get 'live' => 'pages#live'  
   get 'archive' => 'pages#archive'
-  get 'pi' => 'pages#pi'
   get 'holding' => 'pages#holding'
   get 'login' => 'pages#login'
 

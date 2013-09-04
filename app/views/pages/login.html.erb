@@ -4,8 +4,8 @@
 	<div class="row"> 
 		<div class="login span3">
 			<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), html: { class: 'form-horizontal'}) do |f| %>
-	    	<%= f.input :email, :required => true, :autofocus => true %>
-	    	<%= f.input :password, :required => true %>
+	    	<%= f.input :email, :autofocus => true %>
+	    	<%= f.input :password %>
 	    <div class="form-actions">
 	   		<%= f.button :submit, "Login", class: 'btn btn-primary btn-large' %>
 		</div>
