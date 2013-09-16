@@ -7,8 +7,7 @@
         <span class="icon-bar"></span>
       </a>
        
-       <a class="brand" href="/"><img src="assets/astellas-oncology.png"/></a>
-        
+       <a class="brand" href="/"><!-- <img src="assets/astellas-oncology.png"/>--></a>
         <% if user_signed_in? %>
 
         <div class="nav-collapse pull-right collapse">
@@ -22,7 +21,7 @@
 						<li>
 							<%= link_to "Prescribing Information", "/XTANDI PI.pdf" %>
 						</li>
-
+            <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
             <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
             </ul>
               <% else %>
@@ -30,6 +29,8 @@
               <ul class="nav">
                 <li><%= link_to "Register", home_path %></li>
                 <li><%= link_to "Login", login_path %></li>
+                <li><%= link_to 'Forgot your password?', new_password_path(resource_name) %></li>
+
               <% end %>
             </ul>
                 </div>

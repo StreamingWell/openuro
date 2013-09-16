@@ -1,33 +1,24 @@
 <% if user_signed_in? %>
 	<div class="jumbotron">
-		<br>
 		<h1>Astellas Oncology LIVE Lunchtime Webinars</h1>
 		<h4><i>A multidisciplinary approach to prostate cancer understanding and management</i></h4>
 		<br>
 		<h5>Please login on January 15, 2014 at 13:00 to watch</h5><h5>John Doe from Astellas present a live webinar entitled:</h5>
 		<br>
 		<h3><span style="color: #A72B4D">Webinar Title</span></h3>
-	</div>
-<% else %>
-
-	<div class="jumbotron">
-		<br>
-		<h1>Astellas Oncology LIVE Lunchtime Webinars</h1>
-		<h4><i>A multidisciplinary approach to prostate cancer understanding and management</i></h4>
-			<br>
-		<h3>Please select whether you would like to:</h3>
-		<br>
-		<p><%= link_to 'Register', home_path, class: "btn btn-danger btn-large" %>
-		</p>
-		<br>
-		<p>
-			<%= link_to 'Login', login_path, class: "btn btn-primary btn-large" %>
-		</p>
 
 		<div class= "bird">
 			<img src="assets/bird_oncology.png"/>
 		</div>
+
 	</div>
+
+	      <%= render 'layouts/footer' %>
+
+
+<% else %>
+
+	<%= render 'layouts/preregistration' %>
 
 <% end %>
 

@@ -1,17 +1,41 @@
-<h2>Sign up</h2>
+<div class="jumbotron">
+  <h1>Astellas Oncology LIVE Lunchtime Webinars</h1>
+  <h4><i>A multidisciplinary approach to prostate cancer understanding and management</i></h4>
 
-<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
+  <br>
+  <h4>To register for this webinar series please complete the following information:</h4>
+<div class="login span6">
 
-  <div class="form-inputs">
-    <%= f.input :email, :required => true, :autofocus => true %>
-    <%= f.input :password, :required => true %>
-    <%= f.input :password_confirmation, :required => true %>
-  </div>
+    <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { class: 'form-horizontal'}) do |f| %>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
+    <%= f.input :name, :autofocus => true %>
+    <%= f.input :email, :autofocus => true %>
+    <%= f.input :company, :autofocus => true, label: "Place of Work" %>
+    <%= f.input :job, :autofocus => true, label: "Job Title" %>
+    <%= f.input :password %>
+    <%= f.input :password_confirmation %>
+      
+        <div class="span2">
+        </div>
+        
+        <div class="login span6 offset2">
+
+        <p>Please tick this box if you permit two reminder emails to be sent to you prior to each live webinar and also again once each webinar has been archived for viewing on the website.</p> 
+            <%= f.input :reminder, :as => :boolean, :label => "Accept", :input_html => { :checked => "checked" } %>
+
+        <br>
+               <p>Are you a healthcare professional? Please select either yes or no:
+                <%= f.button :submit, "Yes", class: 'btn btn-primary btn-large' %>
+                <%= link_to "No", error_path, class: 'btn btn-danger btn-large' %>
+               </p>
+
+        </div>
+
 <% end %>
+</div>
+    <div class= "bird">
+        <img src="assets/bird_oncology.png"/>
+    </div>
+</div>
 
-<%= render "devise/shared/links" %>
+      <%= render 'layouts/prefooter' %>

@@ -1,16 +1,15 @@
 class ContactController < ApplicationController
 
 def new
-    @message = Message.new
+    @register = Register.new
   end
 
   def create
-    @message = Message.new(params[:message])
+    @register = Register.new(params[:register])
     
-    if @message.valid?
+    if @register.valid?
        @success = true
-      NotificationsMailer.new_message(@message).deliver
-      # redirect_to(live_path, :notice => "Message was successfully sent.")
+      redirect_to(root_path, :notice => "You have successfully registered.")
       respond_to do |format|
         format.js
       end

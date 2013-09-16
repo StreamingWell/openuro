@@ -66,5 +66,16 @@ Openmicrosite::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
   # In production, :host should be set to the actual host of your application.
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.action_mailer.default_url_options = { :host => 'http://warm-dawn-9465.herokuapp.com/' }
+
+  # Email configuration for SendGrid with Devise and Heroku
+  config.action_mailer.default_url_options = { :host => 'http://warm-dawn-9465.herokuapp.com/' }
+  ActionMailer::Base.smtp_settings = {
+    :address        => "smtp.sendgrid.net",
+    :port           => "25",
+    :authentication => :plain,
+    :user_name      => ENV['SENDGRID_USERNAME'],
+    :password       => ENV['SENDGRID_PASSWORD'],
+    :domain         => ENV['http://warm-dawn-9465.herokuapp.com/']
+  }
 end

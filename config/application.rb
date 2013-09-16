@@ -62,14 +62,15 @@ module Openmicrosite
     # Required for Devise on Heroku
     config.assets.initialize_on_precompile = false
 
-    config.action_mailer.smtp_settings = {
-      :address              => "smtp.mandrillapp.com",
-      :port                 => 587,
-      :domain               => "localhost:3000",
-      :user_name            => "app17619065@heroku.com",
-      :password             => "pnHua4WntMuoYdhCnpS4Yg",
-      :authentication       => :plain,
-      :enable_starttls_auto => true
+    # Email configuration for SendGrid with Devise and Heroku
+    config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+    ActionMailer::Base.smtp_settings = {
+      :address        => "smtp.sendgrid.net",
+      :port           => "25",
+      :authentication => :plain,
+      :user_name      => ENV['app17619065@heroku.com'],
+      :password       => ENV['ulcraesp'],
+      :domain         => ENV['localhost:3000']
     }
 
     config.action_mailer.default_url_options = {

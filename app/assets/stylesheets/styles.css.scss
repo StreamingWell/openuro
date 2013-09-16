@@ -6,7 +6,7 @@ $btnPrimaryBackground: purple;
 body{
     padding-top: 0px;
 
-    color: rgb(135, 135, 133);
+    color: rgb(147, 149, 152);
 
 }
 
@@ -26,13 +26,13 @@ body{
 
 .navbar .nav > li {
     float: left;
-    background-color: rgb(167, 43, 77);
+    background-color: rgb(166, 43, 77);
     margin-right: 3px;
     color: #fff;
 }
 
 .navbar .nav > li > a:focus, .navbar .nav > li > a:hover {
-    background-color: rgb(167, 43, 77);
+    background-color: rgb(166, 43, 77);
     color: #fff;
     text-decoration: none;
 }
@@ -66,7 +66,7 @@ body{
 .jumbotron {
 	text-align: center;
 	font-family: Arial;
-	padding: 50px 10px 20px 10px;
+	padding: 20px 10px 20px 10px;
 	display: block;
 	border-width: 1px;
 	border-style: solid;
@@ -83,9 +83,11 @@ body{
 	background-image: url('#');
 	background-repeat: no-repeat;
 	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
 .jumbotron h1 {
+    font-size: 24pt;
 }
 
 .jumbotron h3 {
@@ -110,14 +112,19 @@ body{
 }
 
 .login {
-	text-align: left !important;
+	text-align: left;
  	margin:0 auto;
 	float:none;
-	padding-right: 125px;
+    display: inline-block !important;
+    vertical-align: middle !important;
+}
+
+.login p {
+    text-align: center;
 }
 
 .form-horizontal {
-	margin-left: -80px;
+	padding-left: 10px;
 	margin-top: 30px;
 }
 
@@ -148,6 +155,7 @@ body{
 }
 
 .btn {
+    margin-top: 10px;
 	margin-left: 0px;
 	margin-right:3px;
 	padding-left: 80px;
@@ -158,7 +166,7 @@ body{
 .btn-primary {
     color: white;
     text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
-    background-color: rgb(167, 43, 77);
+    background-color: rgb(166, 43, 77);
     background-image: none !important;
     background-repeat: none !important;
     border-color: none !important;
@@ -168,7 +176,7 @@ body{
 .btn-primary:hover {
     color: white;
     text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
-    background-color: rgb(167, 0, 77);
+    background-color: rgb(166, 0, 77);
     background-image: none !important;
     background-repeat: none !important;
     border-color: none !important;
@@ -178,7 +186,7 @@ body{
 .btn-danger {
     color: #fff;
     text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
-    background-color:rgb(228, 85, 51);
+    background-color:rgb(217, 83, 30);
     background-image: none !important;
     background-repeat: none !important;
     border-color: none !important;
@@ -189,7 +197,7 @@ body{
 .btn-danger:hover {
     color: #fff;
     text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
-    background-color:rgb(228, 75, 51);
+    background-color:rgb(241, 93, 34);
     background-image: none !important;
     background-repeat: none !important;
     border-color: none !important;
@@ -265,4 +273,56 @@ abbr[title], abbr[data-original-title] {
 
 .row {
     margin-bottom: -30px;
+}
+
+.accordion-group {
+    margin-bottom: 2px;
+    border: none;
+    border-radius: 4px 4px 4px 4px;
+}
+
+.accordion-inner {
+    padding: 9px 15px;
+    border-top: none;
+}
+
+.marketing-live {
+    text-align: left;
+    margin-left: 200px;
+    margin-right:200px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+}
+
+#message_body {
+    max-width: 80%;
+}
+
+element.style {
+    font-Family: arial;
+    font-size: 12px;
+    float: left;
+    border: none;
+    background: white;
+    margin: 0 8px 0 8px;
+    font-weight: bold;
+    color: #003768;
+    padding: 4px 6px 4px 6px;
+}
+
+.navbar .brand {
+    font-size: 20px;
+    font-weight: 200;
+    color: rgb(119, 119, 119);
+    text-shadow: 0px 1px 0px white;
+    background-image: url('/assets/astellas-oncology.png');
+    background-repeat: no-repeat;
+    padding-top: 25px;
+    padding-left: 200px;
+    margin-top: 10px;
+}
+
+.radio, .checkbox {
+    min-height: 0px;
+    padding-left: 10px;
 }

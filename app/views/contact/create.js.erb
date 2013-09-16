@@ -1,0 +1,11 @@
+<% if @success  %>
+// show an actual nice bootstrap alert success notification
+$('#form-success').slideDown().delay(2000).slideUp();
+// reset the form
+$('form#new_message')[0].reset();
+
+<% else %>
+// show an actual nice bootstrap alert error
+$('#form-error').slideDown().delay(2000).slideUp();
+
+<% end %>
