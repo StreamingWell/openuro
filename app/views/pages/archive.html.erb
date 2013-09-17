@@ -1,58 +1,99 @@
+<% if user_signed_in? %>
+
 <div class="jumbotron">
 	<h1>Astellas Oncology LIVE Lunchtime Webinars</h1>
 	<h4><i>A multidisciplinary approach to prostate cancer understanding and management</i></h4>
 	<br>
 	<p>The following archived webinar(s) are available to view:</p>
 	<br>
-	<h3><span style="color: #A72B4D">Webinar Title</span></h3>
-	<h5>
-		John Doe, January 15, 2014
-	</h5>
-		<br>
 
-	<br>
-		<img src="assets/archived-webcast.png"/>
-	</br>
+<div class="accordion" id="accordion2">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+				<h3><span style="color: #A72B4D">Webinar Title 1</span></h3>
+      </a>
+    </div>
+    <div id="collapseOne" class="accordion-body collapse in">
+      <div class="accordion-inner">
+				<h5>
+					John Doe, January 15, 2014
+				</h5>
+					<br>
 
-		<br>
-		<hr>
+					<br>
+				<img src="assets/archived-webcast.png"/>
+					</br>
 
-	<br>
-	<h3><span style="color: #A72B4D">Webinar Title</span></h3>
-	<h5>
-		Jane Doe, February 15, 2014
-	</h5>
-		<br>
-	<br>
-		<img src="assets/archived-webcast.png"/>
-	</br>
+					<br>
+					<hr>      
+			</div>
+    </div>
+  </div>
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+				<h3><span style="color: #A72B4D">Webinar Title 2</span></h3>
+      </a>
+    </div>
+    <div id="collapseTwo" class="accordion-body collapse">
+      <div class="accordion-inner">
+				<h5>
+					Jane Doe, February 15, 2014
+				</h5>
+					<br>
 
-		<br>
-		<hr>
+					<br>
+				<img src="assets/archived-webcast.png"/>
+					</br>
 
-	<br>
-	<h3><span style="color: #A72B4D">Webinar Title</span></h3>
-	<h5>
-		Jane Doe, March 15, 2014
-	</h5>
-		<br>
-	<br>
-		<img src="assets/archived-webcast.png"/>
-	</br>
+					<br>
+					<hr>           
+			</div>
+    </div>
+  </div>
 
-		<br>
-		<hr>
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+				<h3><span style="color: #A72B4D">Webinar Title 3</span></h3>
+      </a>
+    </div>
+    <div id="collapseThree" class="accordion-body collapse">
+      <div class="accordion-inner">
+				<h5>
+					Jane Doe, March 15, 2014
+				</h5>
+					<br>
 
-	<br>
-	<h3><span style="color: #A72B4D">Webinar Title</span></h3>
-	<h5>
-		John Doe, April 15, 2014
-	</h5>
-		<br>
-	<br>
-		<img src="assets/archived-webcast.png"/>
-	</br>
-	<br>
+					<br>
+				<img src="assets/archived-webcast.png"/>
+					</br>
+
+					<br>
+					<hr>           
+			</div>
+    </div>
+  </div>
+
+    <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">
+				<h3><span style="color: #A72B4D">Webinar Title 4</span></h3>
+      </a>
+    </div>
+    <div id="collapseFour" class="accordion-body collapse">
+      <div class="accordion-inner">
+				<h5>
+					John Doe, April 15, 2014
+				</h5>
+					<br>
+				<img src="assets/archived-webcast.png"/>
+			</div>
+    </div>
+  </div>
+
+</div>
 
 	<div class= "bird">
         <img src="assets/bird_oncology.png"/>
@@ -60,3 +101,11 @@
 </div>
 
       <%= render 'layouts/footer' %>
+
+<% else %>
+     
+      <%= render 'layouts/preregistration' %>
+
+      <%= render 'layouts/prefooter' %>
+
+<% end %>
