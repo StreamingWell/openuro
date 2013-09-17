@@ -63,18 +63,18 @@ module Openmicrosite
     config.assets.initialize_on_precompile = false
 
     # Email configuration for SendGrid with Devise and Heroku
-    config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+    config.action_mailer.default_url_options = { :host => 'http://warm-dawn-9465.herokuapp.com' }
     ActionMailer::Base.smtp_settings = {
       :address        => "smtp.sendgrid.net",
       :port           => "25",
       :authentication => :plain,
       :user_name      => ENV['app17619065@heroku.com'],
       :password       => ENV['ulcraesp'],
-      :domain         => ENV['localhost:3000']
+      :domain         => ENV['http://warm-dawn-9465.herokuapp.com']
     }
 
     config.action_mailer.default_url_options = {
-      :host => "localhost:3000"
+      :host => "http://warm-dawn-9465.herokuapp.com"
     }
   end
 end
