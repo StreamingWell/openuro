@@ -20,6 +20,9 @@ class PagesController < ApplicationController
   def preregistration
   end
 
+  def error
+  end
+
   protected
 
   def authenticate

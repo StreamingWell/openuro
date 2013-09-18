@@ -13,6 +13,7 @@ def new
       # redirect_to(live_path, :notice => "Message was successfully sent.")
       respond_to do |format|
         format.js
+        format.html
       end
 
     else
