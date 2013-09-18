@@ -337,3 +337,13 @@ element.style {
     border-color: rgb(238, 238, 238);
     border-radius: 4px 4px 4px 4px;
 }
+
+.modal-footer {
+    padding: 14px 15px 15px;
+    margin-bottom: 0px;
+    text-align: center;
+    background-color: rgb(245, 245, 245);
+    border-top: 1px solid rgb(221, 221, 221);
+    border-radius: 0px 0px 6px 6px;
+    box-shadow: 0px 1px 0px white inset;
+}

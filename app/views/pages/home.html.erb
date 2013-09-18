@@ -44,10 +44,26 @@
 
         <br>
                <p>Are you a healthcare professional? Please select either yes or no:
-                <%= f.button :submit, "Yes", class: 'btn btn-primary btn-large' %>
-                <%= link_to "No", error_path, class: 'btn btn-danger btn-large' %>
+                    <%= f.button :submit, "Yes", class: 'btn btn-primary btn-large' %>
+                    <!-- Button trigger modal -->
+                    <a data-toggle="modal" href="#myModal" class="btn btn-danger btn-large">No</a>
                </p>
 
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <h4><span style="color: rgb(167, 43, 77)">Unfortunately as you are not a healthcare professional you are not permitted to view these webinars.</span></h4>         
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Please click here to close the web page</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
         </div>
 
 <% end %>
