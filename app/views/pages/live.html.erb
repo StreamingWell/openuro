@@ -1,3 +1,4 @@
+<% if user_signed_in? %>
 
 <div class="jumbotron">
 	<h1>Astellas Oncology LIVE Lunchtime Webinars</h1>
@@ -11,14 +12,14 @@
 	</h5>
 	
 	<br>
-	
+
 	<img src="assets/webcast.png"/>
 
 	<hr>
 
 	<!-- flash_notice to show if form submission is successful -->
 	<div class="alert alert-success" id="form-success" style="display: none;">
-		<strong>Your message was successfully sent. We'll send you a response shortly.</strong>
+		<strong>Thank you, your question was successfully sent.</strong>
 	</div>
 
 	<!-- flash_notice to show if form submission is unsuccessful -->
@@ -31,7 +32,7 @@
 	</span></h4>
 
 <div class="login span8 offset1">
-		<%= simple_form_for(@message, :url => contact_path, method: :post, remote: true, html: { class: "form-horizontal"}) do |form| %>
+		<%= simple_form_for @message, :url => contact_path, method: :post, remote: true, html: { class: "form-horizontal"} do |form| %>
 
 			  <%= form.input :name, label: 'Name' %>
 			  <%= form.input :email, label: 'E-mail Address' %>
@@ -55,4 +56,10 @@
 
       <%= render 'layouts/footer' %>
 
+<% else %>
+     
+      <%= render 'layouts/preregistration' %>
 
+      <%= render 'layouts/prefooter' %>
+
+<% end %>
