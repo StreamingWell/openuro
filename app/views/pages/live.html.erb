@@ -34,7 +34,7 @@
 	</span></h4>
 
 <div class="login span8 offset1">
-		<%= simple_form_for @message, :url => contact_path, method: :post, remote: true, html: { class: "form-horizontal"} do |f| %>
+		<%= simple_form_for @message, :url => contact_path, method: :post, :remote => true, html: { class: "form-horizontal"} do |f| %>
 
 			  <%= f.input :name, label: 'Name' %>
 			  <%= f.input :email, label: 'E-mail Address' %>
