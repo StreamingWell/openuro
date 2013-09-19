@@ -20,7 +20,8 @@ class PagesController < ApplicationController
   def preregistration
   end
 
-  def error
+  def evaluation
+    @message = Message.new
   end
 
   protected

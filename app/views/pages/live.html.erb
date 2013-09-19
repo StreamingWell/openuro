@@ -9,10 +9,13 @@
 	<h5>
 		John Doe, Astellas
 	</h5>
-	
 	<br>
 
 	<img src="assets/webcast.png"/>
+	<div class"span12">
+	<%= link_to "Leave Feedback", evaluation_path, class: "btn btn-danger" %>
+</div>
+	<br>
 
 	<hr>
 
@@ -43,6 +46,7 @@
 			    <%= form.submit "Send", class: 'btn btn-primary btn-large' %>
 			  </fieldset>
 		<% end %>
+
 	<br>
 	<p>
 		Please note, this webinar will last up to 45 minutes and will be available to view, at a later date, by registered users post the event on the <%= link_to 'archive page', archive_path %>.
