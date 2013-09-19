@@ -34,16 +34,16 @@
 	</span></h4>
 
 <div class="login span8 offset1">
-		<%= simple_form_for @message, :url => contact_path, method: :post, remote: true, html: { class: "form-horizontal"} do |form| %>
+		<%= simple_form_for @message, :url => contact_path, method: :post, remote: true, html: { class: "form-horizontal"} do |f| %>
 
-			  <%= form.input :name, label: 'Name' %>
-			  <%= form.input :email, label: 'E-mail Address' %>
-		  	  <%= form.input :body, label: 'Question', as: :text, input_html: { rows: "3" } %>
+			  <%= f.input :name, label: 'Name' %>
+			  <%= f.input :email, label: 'E-mail Address' %>
+		  	  <%= f.input :body, label: 'Question', as: :text, input_html: { rows: "3" } %>
 		  <br>
 		  </div>
 
 			  <fieldset class="actions">
-			    <%= form.submit "Send", class: 'btn btn-primary btn-large' %>
+			    <%= f.submit "Send", class: 'btn btn-primary btn-large' %>
 			  </fieldset>
 		<% end %>
 
