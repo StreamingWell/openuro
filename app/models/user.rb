@@ -9,8 +9,12 @@ class User < ActiveRecord::Base
   attr_accessible :name, :email, :company, :job, :password, :password_confirmation, :remember_me, :hcp, :nothcp, :reminder, :future
   # attr_accessible :title, :body
 
-  after_create :send_admin_mail
-	def send_admin_mail
-   		###Send email stuff here
-	end
+  after_create :send_user_and_admin_notification
+
+  private
+
+  	def send_user_and_admin_notification
+      AdminMailer.registration_notification(self).deliver
+      UserMailer.welcome(self).deliver
+  	end
 end

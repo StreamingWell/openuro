@@ -1,18 +1,27 @@
 class FeedbackController < ApplicationController
 
-def new
+  def new
     @feedback = Feedback.new
   end
 
   def create
     @feedback = Feedback.new(params[:feedback])
-    
+
     if @feedback.valid?
-      FeedbackMailer.new_feedback(@feedback).deliver
-      redirect_to(live_path, :notice => "Thank you. Your comments have been received.")
+      @success = true
+      NotificationsMailer.new_feedback(@feedback).deliver
+      # redirect_to(live_path, :notice => "Message was successfully sent.")
+      respond_to do |format|
+        format.js
+        format.html
+      end
 
     else
-      redirect_to(evaluation_path, :notice => "Please fill all fields.")
+      @success = false
+
+      respond_to do |format|
+        format.js
+      end
     end
   end
 

@@ -7,4 +7,9 @@ class NotificationsMailer < ActionMailer::Base
     @message = message
     mail(:subject => "Question: Prostate Cancer Lunchtime Webinar")
   end
+
+  def new_feedback(feedback)
+    @feedback = feedback
+    mail(:subject => "New Feedback")
+  end
 end

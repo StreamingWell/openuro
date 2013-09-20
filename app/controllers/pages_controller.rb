@@ -26,9 +26,10 @@ class PagesController < ApplicationController
 
   protected
 
-  def authenticate
-	  authenticate_or_request_with_http_basic do |username, password|
-	    username == "admin" && password == "prostate2013"
- 	 end
-end
+    def authenticate
+  	  authenticate_or_request_with_http_basic do |username, password|
+  	    username == "admin" && password == "prostate2013"
+   	  end
+    end
+
 end
