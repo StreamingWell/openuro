@@ -3,6 +3,9 @@ Openmicrosite::Application.routes.draw do
   match 'contact' => 'contact#new', :as => 'contact', :via => :get
   match 'contact' => 'contact#create', :as => 'contact', :via => :post
 
+  match 'feedback' => 'feedback#new', :as => 'feedback', :via => :get
+  match 'feedback' => 'feedback#create', :as => 'feedback', :via => :post
+
   devise_for :users
 
   root :to => 'pages#preregistration'
