@@ -18,11 +18,11 @@
 	</span></h4>
 
 <div class="login span8 offset1">
-		<%= simple_form_for @message, :url => contact_path, method: :post, remote: true, html: { class: "form-horizontal"} do |form| %>
+		<%= simple_form_for @feedback, :url => contact_path, method: :post, remote: true, html: { class: "form-horizontal"} do |form| %>
 
-			  <%= form.input :name, label: 'Name' %>
-			  <%= form.input :email, label: 'E-mail Address' %>
-		  	  <%= form.input :body, label: 'Comments', as: :text, input_html: { rows: "3" } %>
+			  <%= form.input :name, label: 'Name', required: false %>
+			  <%= form.input :email, label: 'E-mail Address', required: false %>
+		  	  <%= form.input :body, label: 'Comments', required: false, as: :text, input_html: { rows: "3" } %>
 		  <br>
 		  </div>
 

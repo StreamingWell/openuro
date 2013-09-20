@@ -1,8 +1,7 @@
+<% if user_signed_in? %>
 
 <div class="jumbotron">
-	<h1>Astellas Oncology LIVE Lunchtime Webinars</h1>
-	<h4><i>A multidisciplinary approach to prostate cancer understanding and management</i></h4>
-
+	<%= render 'layouts/title' %>
 	<br>
 	
 	<h3><span style="color: rgb(167, 43, 77)">Webinar Title</span></h3>
@@ -34,16 +33,16 @@
 	</span></h4>
 
 <div class="login span8 offset1">
-		<%= simple_form_for @message, :url => contact_path, method: :post, :remote => true, html: { class: "form-horizontal"} do |f| %>
+		<%= simple_form_for @message, :url => contact_path, method: :post, remote: true, html: { class: "form-horizontal"} do |form| %>
 
-			  <%= f.input :name, label: 'Name' %>
-			  <%= f.input :email, label: 'E-mail Address' %>
-		  	  <%= f.input :body, label: 'Question', as: :text, input_html: { rows: "3" } %>
+			  <%= form.input :name, label: 'Name', required: false %>
+			  <%= form.input :email, label: 'E-mail Address', required: false %>
+		  	  <%= form.input :body, label: 'Question', required: false, as: :text, input_html: { rows: "3" } %>
 		  <br>
 		  </div>
 
 			  <fieldset class="actions">
-			    <%= f.submit "Send", class: 'btn btn-primary btn-large' %>
+			    <%= form.submit "Send", class: 'btn btn-primary btn-large' %>
 			  </fieldset>
 		<% end %>
 
@@ -59,4 +58,10 @@
 
       <%= render 'layouts/footer' %>
 
+<% else %>
+     
+      <%= render 'layouts/preregistration' %>
 
+      <%= render 'layouts/prefooter' %>
+
+<% end %>

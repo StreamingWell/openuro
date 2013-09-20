@@ -18,8 +18,8 @@
     </div> -->
 
 <div class="jumbotron">
-	<h1>Astellas Oncology LIVE Lunchtime Webinars</h1>
-	<h4><i>A multidisciplinary approach to prostate cancer understanding and management</i></h4>
+	   <%= render 'layouts/title' %>
+
 
 	<br>
 	<h4>To register for this webinar series please complete the following information:</h4>
@@ -33,24 +33,25 @@
     <%= f.input :job, :autofocus => true, label: "Job Title" %>
     <%= f.input :password %>
     <%= f.input :password_confirmation %>
-    	
-        <div class="span2">
-        </div>
         
         <div class="login span6 offset2">
 
-		    <p>Please tick this box if you permit two reminder emails to be sent to you prior to each live webinar and also again once each webinar has been archived for viewing on the website.</p> 
+		    <h6>Please tick this box if you permit two reminder emails to be sent to you prior to each live webinar and also again once each webinar has been archived for viewing on the website.</h6> 
             <%= f.input :reminder, :as => :boolean, :label => "Accept", :input_html => { :checked => "checked" } %>
 
+        <h6>Please tick this box if you are happy to be contacted by Astellas Oncology in the future.</h6> 
+            <%= f.input :future, :as => :boolean, :label => "Accept", :input_html => { :checked => "checked" } %>
+
         <br>
-               <p>Are you a healthcare professional? Please select either yes or no:
-                    <%= f.button :submit, "Yes", class: 'btn btn-primary btn-large' %>
-                    <!-- Button trigger modal -->
-                    <a data-toggle="modal" href="#myModal" class="btn btn-danger btn-large">No</a>
-               </p>
+          <p>Are you a healthcare professional? Please select either yes or no:</p>
 
+          <div class="marketing">
+            <%= f.button :submit, "Yes", class: 'btn btn-primary btn-large' %>
+            <!-- Button trigger modal -->
+            <a data-toggle="modal" href="#myModal" class="btn btn-danger btn-large">No</a>
+          </div>
 
-
+          <br>
   <!-- Modal -->
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">

@@ -21,7 +21,7 @@ class PagesController < ApplicationController
   end
 
   def evaluation
-    @message = Message.new
+    @feedback = Feedback.new
   end
 
   protected
