@@ -9,6 +9,9 @@ class User < ActiveRecord::Base
   attr_accessible :name, :email, :company, :job, :password, :password_confirmation, :remember_me, :hcp, :nothcp, :reminder, :future
   # attr_accessible :title, :body
 
+  INVALID_EMAILS = %w(gmail.com googlemail.com hotmail.co.uk hotmail.com live.co.uk yahoo.com yahoo.co.uk)
+  validates_format_of :email, :without => /#{INVALID_EMAILS.map{|a| Regexp.quote(a)}.join('|')}/, :message => "Please register using your work email address."
+
   after_create :send_user_and_admin_notification
 
   private
@@ -18,3 +21,23 @@ class User < ActiveRecord::Base
       UserMailer.welcome(self).deliver
   	end
 end
+
+
+ # EXCLUSION_DOMAINS = %w[
+ #   gmail.com
+ #   yahoo.com
+ #   yahoo.co.uk
+  #  hotmail.com
+  #  hotmail.co.uk
+ #   googlemail.com
+ #   live.co.uk
+#]
+
+#EXCLUSION_REGEXP = Regexp.new('(?:' + EXCLUSION_DOMAINS.collect { |d| Regexp.escape(d)
+
+#validates :email,
+#  :format => {
+#    :with => VALID_EMAIL_REGEXP,
+#    :without => EXCLUSION_REGEXP,
+#    :message => "%{value} may not be used to register. Please use your work email address."
+#}

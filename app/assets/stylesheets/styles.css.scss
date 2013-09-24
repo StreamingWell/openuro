@@ -362,3 +362,11 @@ element.style {
     top: 0px;
     right: 0px;
 }
+
+.collapse {
+    position: relative;
+    height: 0px;
+    transition: height 0.75s ease 0s;
+    overflow: hidden !important;
+    max-height: 100%;
+}

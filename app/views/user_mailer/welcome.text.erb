@@ -1,5 +1,5 @@
-<h1>Thanks you for registering</h1>
+Thanks you for registering
 
-<p>Your username is the email you used to sign-up - <strong><%= @user.email %></strong></p>
+Your username is the email you used to sign-up - <%= @user.email %>
 
 Please login to the site at <%= new_user_session_url(host: 'example.com') %>
