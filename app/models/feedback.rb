@@ -4,9 +4,9 @@ class Feedback
   include ActiveModel::Conversion
   extend ActiveModel::Naming
 
-  attr_accessor :name, :email, :body
+  attr_accessor :high, :middle, :low, :body
 
-  validates :name, :email, :body, :presence => true
+  validates :high, :middle, :low, :body, :presence => true
   
   def initialize(attributes = {})
     attributes.each do |name, value|

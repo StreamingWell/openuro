@@ -19,4 +19,3 @@ class DeviseCreateAdmins < ActiveRecord::Migration
     drop_table :admins
   end
 end
-end
