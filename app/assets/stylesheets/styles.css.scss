@@ -78,16 +78,18 @@ body{
 	border-image: none;
 	max-width: 99%;
 	min-width: 220px;
-	border-radius: 5px 5px 5px 5px;
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
-	background-image: url('#');
+	background-image: url('xtandi-bg-test.jpg');
 	background-repeat: no-repeat;
 	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
 
 .jumbotron h1 {
-    font-size: 24pt;
+    font-size: 20pt;
+    color: rgb(167, 43, 77);
+    margin-bottom: -2px;
+
 }
 
 .jumbotron h3 {
@@ -96,12 +98,12 @@ body{
 
 .jumbotron h4 {
   font-weight: 100;
+  font-size: 14px;
+  margin-top:-2px;
 }
 
 .jumbotron h4 i {
   font-weight: 100;
-  color: rgb(167, 43, 77);
-  background: #fff;
 }
 
 .jumbotron h5 {
@@ -110,6 +112,7 @@ body{
   font-size: 18pt;
   margin-bottom: -3px;
 }
+
 
 .login {
 	text-align: left;
@@ -336,10 +339,10 @@ element.style {
 
 .accordion-group {
     margin-bottom: 2px;
-    border-width: 1px;
+    border-width: 0px;
     border-style: solid;
     border-color: rgb(238, 238, 238);
-    border-radius: 4px 4px 4px 4px;
+    border-radius: 0px 0px 0px 0px;
 }
 
 .modal-footer {
@@ -369,4 +372,19 @@ element.style {
     transition: height 0.75s ease 0s;
     overflow: hidden !important;
     max-height: 100%;
+}
+
+.next-webinar {
+    text-align: left;
+    padding: 10px;
+}
+
+h6 {
+    font-size: 11.9px;
+    padding: 0px 100px;
+}
+
+a:focus {
+    outline: none;
+    outline-offset: -2px;
 }

@@ -1,101 +1,93 @@
 <% if user_signed_in? %>
 
 <div class="jumbotron">
-	<%= render 'layouts/title' %>
-	<br>
-	<p>The following archived webinar(s) are available to view:</p>
-	<br>
+  <%= render 'layouts/title' %>
+  <br>
+  <p>The following archived webinar(s) are available to view:</p>
+  <br>
 
+<div class="span8 offset1">
 <div class="accordion" id="accordion2">
   <div class="accordion-group">
     <div class="accordion-heading">
       <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-				<h3><span style="color: #A72B4D">Webinar Title 1</span></h3>
+        <h5><span style="color: #A72B4D">Working together: organising care <br>for optimal management of prostate cancer</span></h5>
       </a>
     </div>
-    <div id="collapseOne" class="accordion-body collapse in">
+    <div id="collapseOne" class="accordion-body collapse out">
       <div class="accordion-inner">
-				<h5>
-					John Doe, January 15, 2014
-				</h5>
-					<br>
+        <h6><strong>
+          Dr Simon Hughes, Consultant in Clinical Oncology and <br>Louisa Fleure, Advanced Prostate Cancer Specialist Nurse Guy's Hospital, London
+        </strong></h6>
+          <br>
 
-					<br>
-						<!-- <iframe width="640" height="360" src="//www.youtube.com/embed/qeYthltbbAw" frameborder="0" allowfullscreen></iframe> -->
-						<img src="assets/archived-webcast.png"/>
-					</br>
-					<br>
-			</div>
+          <br>
+            <!-- <iframe width="640" height="360" src="//www.youtube.com/embed/qeYthltbbAw" frameborder="0" allowfullscreen></iframe> -->
+            <img src="assets/archived-webcast.png"/>
+                    	<%= link_to "Leave Feedback", evaluation_path, class: "btn btn-danger" %>
+
+          </br>
+          <br>
+      </div>
     </div>
   </div>
+
+  <hr>
+  
   <div class="accordion-group">
     <div class="accordion-heading">
       <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-				<h3><span style="color: #A72B4D">Webinar Title 2</span></h3>
+        <h5><span style="color: #A72B4D">Maximising quality of life for patients <br>with advanced prostate cancer</span></h5>
       </a>
     </div>
     <div id="collapseTwo" class="accordion-body collapse">
       <div class="accordion-inner">
-				<h5>
-					Jane Doe, February 15, 2014
-				</h5>
-					<br>
+        <h6><strong>
+          Lawrence Drudge-Coates, Uro-Oncology Clinical Nurse Specialist <br>and Honorary Lecturer King’s College Hospital NHS Foundation Trust, London
+        </strong></h6>
+          <br>
 
-					<br>
-				<img src="assets/archived-webcast.png"/>
-					</br>
+          <br>
+        <img src="assets/archived-webcast.png"/>
+                            	<%= link_to "Leave Feedback", evaluation_path, class: "btn btn-danger" %>
 
-					<br>
-			</div>
+          </br>
+
+          <br>
+      </div>
     </div>
   </div>
+
+<hr>
 
   <div class="accordion-group">
     <div class="accordion-heading">
       <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
-				<h3><span style="color: #A72B4D">Webinar Title 3</span></h3>
+        <h5><span style="color: #A72B4D">Androgens and prostate cancer: source, role and management*</span></h5>
       </a>
+      <i>*This session will include a discussion regarding the enzalutamide clinical data.</i>
     </div>
     <div id="collapseThree" class="accordion-body collapse">
       <div class="accordion-inner">
-				<h5>
-					Jane Doe, March 15, 2014
-				</h5>
-					<br>
+        <h6><strong>
+          Dr Amit Bahl, Clinical Director and Consultant Oncologist <br>Bristol Haematology and Oncology Centre, University Hospitals Bristol 
+      </strong></h6>
+          <br>
 
-					<br>
-				<img src="assets/archived-webcast.png"/>
-					</br>
+          <br>
+        <img src="assets/archived-webcast.png"/>
 
-					<br>
-			</div>
-    </div>
-  </div>
+                            	<%= link_to "Leave Feedback", evaluation_path, class: "btn btn-danger" %>
 
-    <div class="accordion-group">
-    <div class="accordion-heading">
-      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">
-				<h3><span style="color: #A72B4D">Webinar Title 4</span></h3>
-      </a>
-    </div>
-    <div id="collapseFour" class="accordion-body collapse">
-      <div class="accordion-inner">
-				<h5>
-					John Doe, April 15, 2014
-				</h5>
-					<br>
-				<img src="assets/archived-webcast.png"/>
-			</br>
-			<br>
-			</div>
+          </br>
+
+          <br>
+      </div>
     </div>
   </div>
 
 </div>
-
-	<div class= "bird">
-        <img src="assets/bird_oncology.png"/>
-    </div>
+</div>
 </div>
 
       <%= render 'layouts/footer' %>

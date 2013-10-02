@@ -10,18 +10,10 @@ class FeedbackController < ApplicationController
     if @feedback.valid?
       @success = true
       NotificationsMailer.new_feedback(@feedback).deliver
-      # redirect_to(live_path, :notice => "Message was successfully sent.")
-      respond_to do |format|
-        format.js
-        format.html
-      end
+      redirect_to(live_path, :notice => "Your feedback was successfully submitted.")
 
     else
-      @success = false
-
-      respond_to do |format|
-        format.js
-      end
+      redirect_to(evaluation_path, :notice => "Please fill all fields.")
     end
   end
 

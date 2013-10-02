@@ -11,9 +11,9 @@ Openmicrosite::Application.routes.draw do
   devise_for :users
 
   root :to => 'pages#preregistration'
-  get 'home' => 'pages#home'
+  get 'home' => 'pages#archive'
   get 'live' => 'pages#live'
-  get 'archive' => 'pages#archive'
+  get 'archive' => 'pages#preregistration'
   get 'holding' => 'pages#holding'
   get 'login' => 'pages#login'
   get 'evaluation' => 'pages#evaluation'

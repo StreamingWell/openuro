@@ -25,16 +25,16 @@
 
 		<h4>Q1: How relevant did you find the information presented to your day to day clinical work:</h4>
   			
-			<%= form.input :high, :as => :boolean, :label => "Very relevant", required: false, :input_html => {class: 'left-aligned-checkbox' } %>
-			<%= form.input :middle, :as => :boolean, :label => "Partly relevant", required: false, :input_html => {class: 'left-aligned-checkbox' } %>
-			<%= form.input :low, :as => :boolean, :label => "Not at all relevant", required: false, :input_html => {class: 'left-aligned-checkbox' } %>
+			<%= form.input :very, :as => :boolean, :label => "Very relevant", required: false, :input_html => {class: 'left-aligned-checkbox' } %>
+			<%= form.input :partly, :as => :boolean, :label => "Partly relevant", required: false, :input_html => {class: 'left-aligned-checkbox' } %>
+			<%= form.input :irrelevant, :as => :boolean, :label => "Not at all relevant", required: false, :input_html => {class: 'left-aligned-checkbox' } %>
 			<br>
 
 		<h4>Q2: How did you find the amount of information presented?</h4>
   			
-			<%= form.input :high, :as => :boolean, :label => "Too much", required: false, :input_html => {class: 'left-aligned-checkbox' } %>
-			<%= form.input :middle, :as => :boolean, :label => "About right", required: false, :input_html => {class: 'left-aligned-checkbox' } %>
-			<%= form.input :low, :as => :boolean, :label => "Too little", required: false, :input_html => {class: 'left-aligned-checkbox' } %>
+			<%= form.input :first, :as => :boolean, :label => "Too much", required: false, :input_html => {class: 'left-aligned-checkbox' } %>
+			<%= form.input :second, :as => :boolean, :label => "About right", required: false, :input_html => {class: 'left-aligned-checkbox' } %>
+			<%= form.input :third, :as => :boolean, :label => "Too little", required: false, :input_html => {class: 'left-aligned-checkbox' } %>
 			<br>
 
 		<h4>Q3: How likely is it that you will change your clinical practice as a result of what you have learned from this webinar?</h4>
@@ -51,13 +51,15 @@
 
 		<h4>Q4: How did you find the technical quality of the webinar?</h4>
   			
-			<%= form.input :high, :as => :boolean, :label => "Good", required: false, :input_html => {class: 'left-aligned-checkbox' } %>
-			<%= form.input :middle, :as => :boolean, :label => "Satisfactory", required: false, :input_html => {class: 'left-aligned-checkbox' } %>
-			<%= form.input :low, :as => :boolean, :label => "Poor", required: false, :input_html => {class: 'left-aligned-checkbox' } %>
+			<%= form.input :good, :as => :boolean, :label => "Good", required: false, :input_html => {class: 'left-aligned-checkbox' } %>
+			<%= form.input :satisfactory, :as => :boolean, :label => "Satisfactory", required: false, :input_html => {class: 'left-aligned-checkbox' } %>
+			<%= form.input :poor, :as => :boolean, :label => "Poor", required: false, :input_html => {class: 'left-aligned-checkbox' } %>
 			<br>
 
   			<p>Please add any further comments below:</p>
-		  	  <%= form.input :body, label: false, required: false, as: :text, input_html: { rows: "3" } %>
+		  	  <%= form.input :comment, label: false, required: false, as: :text, input_html: { rows: "3" } %>
+		  <br>
+		  <p>Thank you very much for your feedback.</p>
 		  <br>
 		  </div>
 
