@@ -31,6 +31,7 @@
 			*/
 			body, #backgroundTable{
 				/*@editable*/ background-color:#FAFAFA;
+
 			}
 			
 			/**
@@ -40,6 +41,8 @@
 			*/
 			#templateContainer{
 				/*@editable*/ border: 1px solid #DDDDDD;
+				background-image: url('http://streamingwell.tv/img/email-bg.jpg');
+				background-repeat: no-repeat;
 			}
 			
 			/**
@@ -52,7 +55,7 @@
 				/*@editable*/ color:#939598;
 				display:block;
 				/*@editable*/ font-family:Arial;
-				/*@editable*/ font-size:30px;
+				/*@editable*/ font-size:20px;
 				/*@editable*/ font-weight:bold;
 				/*@editable*/ line-height:100%;
 				margin-top:0;
@@ -112,7 +115,7 @@
 				/*@editable*/ color:#202020;
 				display:block;
 				/*@editable*/ font-family:Arial;
-				/*@editable*/ font-size:14px;
+				/*@editable*/ font-size:11px;
 				/*@editable*/ font-weight:100;
 				/*@editable*/ line-height:100%;
 				margin-top:0;
@@ -222,6 +225,8 @@
 			*/
 			#templateContainer, .bodyContent{
 				/*@editable*/ background-color:#FFFFFF;
+				background-image: url('http://streamingwell.tv/img/email-bg.jpg');
+				background-repeat: no-repeat;
 			}
 			
 			/**
@@ -384,20 +389,18 @@
                                             <td valign="top" class="bodyContent">
                                 
                                                 <!-- // Begin Module: Standard Postcard Content \\ -->
-                                                <table border="0" cellpadding="20" cellspacing="0" width="100%">
+                                                <table border="0" cellpadding="20" cellspacing="0" width="80%">
                                                     <tr mc:repeatable>
                                                         <td valign="top">
                                                         	<div mc:edit="postcard_heading00">
                                                                 <h1 class="h1"><span style="color: rgb(167, 43, 77)">Prostate Cancer Lunchtime Webinars</span></h1>
 																<h4><i>A multidisciplinary approach to prostate cancer understanding and management</i></h4>                                                            
 															</div>
-                                                            
+                                                            <br>
                                                             <div mc:edit="std_content00">
                                                                 <p>Dear <%= @user.name %></p>
 
 																<p>Thank you for registering your interest in the Astellas Oncology live webinars.</p>
-
-																<br>
 
 																<p><strong>Your log-in details are as follows:</strong></p>
 																<p><strong>Username: <%= @user.email %></strong></p>
@@ -408,19 +411,28 @@
 																<br>
 																<p><strong>The next live webinar is as follows:</strong></p>
 
-																<p>Date: <insert date></p>
+																<p>Date: Tuesday 26th November 2013</p>
 																<p>Time: 12.30 to 13.15</p>
-																<p><strong>Title:</strong> <insert title> </p>
-																<p><strong>Speaker(s):</strong> <insert name(s)> from<insert place of work></p>
+																<p><strong>Title:</strong><i>Working together: organising care for optimal management of prostate cancer</i></p>
+																<p><strong>Speaker(s):</strong>  Dr Simon Hughes, Consultant in Clinical Oncology and Louisa Fleure, Advanced Prostate Cancer Specialist Nurse Guy's Hospital, London</p>
 
-																<p><strong>Summary:</strong> <insert summary from leave Piece> </p>
-																<p><strong>Topics:</strong> <insert bulleted summary from Leave Piece></p>
+																<p><strong>Summary:</strong>Dr Simon Hughes and Ms Louisa Fleure will provide expert first-hand insights regarding the successful management of patients with prostate cancer in a multidisciplinary team (MDT) setup.</p>
+
+																<p><strong>Topics:</strong></p>
+																<p><li>The multidisciplinary team (MDT) structure and roles</li></p>
+
+												                  <p><li>Managing patients with differing needs in an MDT environment</li></p>
+
+												                  <p><li>Newly diagnosed patients</li></p>
+
+												                  <p><li>Patients with advanced disease</li></p>
+
+												                  <p><li>Meeting the challenges of a ‘working’ MDT at Guy’s Hospital</li></p>
 																<br>
 																<p>We do hope that you will be able to join us and you find the webinar interesting and informative.</p>
 
 																<p>Please note, details regarding speakers, topics and timings for the full webinar programme are available on the website.</p>
 
-																<br>
 
 																<p>Yours sincerely,</p>
 
