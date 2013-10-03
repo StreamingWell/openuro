@@ -13,7 +13,7 @@ Openmicrosite::Application.routes.draw do
   root :to => 'pages#preregistration'
   get 'home' => 'pages#archive'
   get 'live' => 'pages#live'
-  get 'archive' => 'pages#preregistration'
+  get 'archive' => 'pages#archive'
   get 'holding' => 'pages#holding'
   get 'login' => 'pages#login'
   get 'evaluation' => 'pages#evaluation'

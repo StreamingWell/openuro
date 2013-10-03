@@ -277,6 +277,13 @@ abbr[title], abbr[data-original-title] {
     margin-bottom: 10px;
 }
 
+.form-horizontal-checkbox .control-label {
+    float: left;
+    width: 600px;
+    padding-top: 5px;
+    text-align: left;
+}
+
 .adverse {
     border: 1px solid #000;
     padding-left: 10px;
@@ -349,9 +356,9 @@ element.style {
     margin-top: 10px;
 }
 
-.radio, .checkbox {
-    min-height: 0px;
-    padding-left: 10px;
+.radio input[type="radio"], .checkbox input[type="checkbox"] {
+    float: left;
+    margin-left: 80px;
 }
 
 .accordion {
@@ -379,6 +386,11 @@ element.style {
 .feedback {
     text-align: center;
     top: 25px;
+}
+
+.radio, .checkbox {
+    min-height: 20px;
+    margin-left: -70px;
 }
 
 #content {
@@ -424,4 +436,16 @@ a:focus {
 .timer {
     padding-top: 5px;
     margin-left: 15px;
+}
+
+hr {
+    margin: 20px 60px;
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;
+    border-width: 1px 0px;
+    border-style: solid none;
+    border-color: rgb(204, 204, 204) -moz-use-text-color lightgray;
 }
