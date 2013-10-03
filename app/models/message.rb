@@ -6,7 +6,7 @@ class Message
 
   attr_accessor :name, :email, :body
 
-  validates :name, :email, :body, :presence => true
+  validates :name, :body, :presence => true
   
   def initialize(attributes = {})
     attributes.each do |name, value|

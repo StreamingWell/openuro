@@ -24,6 +24,14 @@
 
 	<hr>
 
+	
+
+	<h4><span style="color: rgb(167, 43, 77)">
+		Please submit a question in the box below:
+	</span></h4>
+
+<div class="login span8 offset1">
+	<div class="span6 offset1">
 	<!-- flash_notice to show if form submission is successful -->
 	<div class="alert alert-success" id="form-success" style="display: none;">
 		<strong>Thank you, your question was successfully sent.</strong>
@@ -33,16 +41,10 @@
 	<div class="alert alert-error" id="form-error" style="display: none;">
 		<strong>Please fill in all fields.</strong>
 	</div>
-
-	<h4><span style="color: rgb(167, 43, 77)">
-		Please submit a question in the box below:
-	</span></h4>
-
-<div class="login span8 offset1">
+</div>
 		<%= simple_form_for @message, :url => contact_path, method: :post, remote: true, html: { class: "form-horizontal"} do |form| %>
 
 			  <%= form.input :name, label: 'Name', required: false %>
-			  <%= form.input :email, label: 'E-mail Address', required: false %>
 		  	  <%= form.input :body, label: 'Question', required: false, as: :text, input_html: { rows: "3" } %>
 		  <br>
 		  </div>
