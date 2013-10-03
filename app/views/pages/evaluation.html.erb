@@ -1,10 +1,9 @@
 <!-- notice to show if form submission is unsuccessful -->
-    <div class="jumbotron">
-    	<div class="span8 offset1">
-        <h1><u>Webinar Feeback Form</u></h1>
-        <h4><span style="color: rgb(167, 43, 77)">We’d be very grateful if you could please just spend one minute providing feedback regarding the webinar you have just watched:</span></h4>
+    <div class="jumbotron-feedback">
+    	<div class="span10">
+        <h1>Webinar Feeback Form</h1>
+        <h6><span style="color: rgb(167, 43, 77)">We’d be very grateful if you could please just spend one minute providing feedback regarding the webinar you have recently watched. Firstly, please indicate which webinar you are providing feedback for:</span></h6>
 
-        <h4>"insert webinar title presented by insert name(s) from insert place of work."</h4>
 <br>
 		<!-- flash_notice to show if form submission is successful -->
 	<div class="alert alert-success" id="form-success" style="display: none;">
@@ -16,32 +15,28 @@
 		<strong>Please fill in all fields.</strong>
 	</div>
 
-	<h4><span style="color: rgb(167, 43, 77)">
-		Please submit a question in the box below:
-	</span></h4>
-
-<div class="login span8 offset1">
+<div class="login span8">
 		<%= simple_form_for @feedback, :url => feedback_path, method: :post, remote: true, html: { class: "form-horizontal"} do |form| %>
 
 		<h4>Q1: How relevant did you find the information presented to your day to day clinical work:</h4>
   			
-			<%= form.input :very, :as => :boolean, :label => "Very relevant", required: false, :input_html => {class: 'left-aligned-checkbox' } %>
-			<%= form.input :partly, :as => :boolean, :label => "Partly relevant", required: false, :input_html => {class: 'left-aligned-checkbox' } %>
-			<%= form.input :irrelevant, :as => :boolean, :label => "Not at all relevant", required: false, :input_html => {class: 'left-aligned-checkbox' } %>
+			<%= form.input :very, :as => :boolean, :label => "Very relevant", required: false %>
+			<%= form.input :partly, :as => :boolean, :label => "Partly relevant", required: false %>
+			<%= form.input :irrelevant, :as => :boolean, :label => "Not at all relevant", required: false %>
 			<br>
 
 		<h4>Q2: How did you find the amount of information presented?</h4>
   			
-			<%= form.input :first, :as => :boolean, :label => "Too much", required: false, :input_html => {class: 'left-aligned-checkbox' } %>
-			<%= form.input :second, :as => :boolean, :label => "About right", required: false, :input_html => {class: 'left-aligned-checkbox' } %>
-			<%= form.input :third, :as => :boolean, :label => "Too little", required: false, :input_html => {class: 'left-aligned-checkbox' } %>
+			<%= form.input :first, :as => :boolean, :label => "Too much", required: false %>
+			<%= form.input :second, :as => :boolean, :label => "About right", required: false %>
+			<%= form.input :third, :as => :boolean, :label => "Too little", required: false %>
 			<br>
 
 		<h4>Q3: How likely is it that you will change your clinical practice as a result of what you have learned from this webinar?</h4>
   			
-			<%= form.input :high, :as => :boolean, :label => "Very likely", required: false, :input_html => {class: 'left-aligned-checkbox' } %>
-			<%= form.input :middle, :as => :boolean, :label => "Quite likely", required: false, :input_html => {class: 'left-aligned-checkbox' } %>
-			<%= form.input :low, :as => :boolean, :label => "Unlikely", required: false, :input_html => {class: 'left-aligned-checkbox' } %>
+			<%= form.input :high, :as => :boolean, :label => "Very likely", required: false %>
+			<%= form.input :middle, :as => :boolean, :label => "Quite likely", required: false %>
+			<%= form.input :low, :as => :boolean, :label => "Unlikely", required: false %>
 			<br>
 
 			<p>If you answered ‘very likely’ or ‘quite likely’ to the last question, please explain how in the following box:</p>
@@ -51,9 +46,9 @@
 
 		<h4>Q4: How did you find the technical quality of the webinar?</h4>
   			
-			<%= form.input :good, :as => :boolean, :label => "Good", required: false, :input_html => {class: 'left-aligned-checkbox' } %>
-			<%= form.input :satisfactory, :as => :boolean, :label => "Satisfactory", required: false, :input_html => {class: 'left-aligned-checkbox' } %>
-			<%= form.input :poor, :as => :boolean, :label => "Poor", required: false, :input_html => {class: 'left-aligned-checkbox' } %>
+			<%= form.input :good, :as => :boolean, :label => "Good", required: false %>
+			<%= form.input :satisfactory, :as => :boolean, :label => "Satisfactory", required: false %>
+			<%= form.input :poor, :as => :boolean, :label => "Poor", required: false %>
 			<br>
 
   			<p>Please add any further comments below:</p>
@@ -68,8 +63,5 @@
 			  </fieldset>
 		<% end %>
 	</div>
-    <div class="bird">
-    	<img src="assets/bird_oncology.png"/>
-    </div>
 </div>
               <%= render 'layouts/prefooter' %>
