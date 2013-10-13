@@ -17,6 +17,7 @@ Openmicrosite::Application.routes.draw do
   get 'holding' => 'pages#holding'
   get 'login' => 'pages#login'
   get 'evaluation' => 'pages#evaluation'
+  # get 'pi' => 'pages#pi'
 
 
   # The priority is based upon order of creation:
