@@ -1,6 +1,6 @@
 <% if user_signed_in? %>
 
-<div class="jumbotron">
+<div class="jumbotron" style="padding: 20px 72px 20px 68px;">
   <%= render 'layouts/title' %>
   <br>
     <p>The following archived webinar(s) are available to view:</p>
@@ -13,15 +13,15 @@
             <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
               <h5><span style="color: #A72B4D">Working together: organising care <br>for optimal management of prostate cancer</span></h5>
 
-                <h6><strong><span style="color: #939598">
+                <p><span style="color: #939598">
                   Dr Simon Hughes, Consultant in Clinical Oncology and <br>Ms Louisa Fleure, Advanced Prostate Cancer Specialist Nurse, Guy's Hospital, London
-                </span></strong></h6>
+                </p></h6>
 
                 <h6><span style="color: #A72B4D">Tuesday 26<sup>th</sup> November 2013 at 12.30-13.15</span></h6>
 
             </a>
           </div>
-    
+
           <div id="collapseOne" class="accordion-body collapse in">
             <div class="accordion-inner">
 
@@ -36,15 +36,15 @@
   </div>
 
   <hr>
-  
+
   <div class="accordion-group">
     <div class="accordion-heading">
       <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
         <h5><span style="color: #A72B4D">Maximising quality of life for patients <br>with advanced prostate cancer</span></h5>
 
-        <h6><strong><span style="color: #939598">
+        <p><span style="color: #939598">
              Lawrence Drudge-Coates, Uro-Oncology Clinical Nurse Specialist <br>and Honorary Lecturer King’s College Hospital NHS Foundation Trust, London
-        </span></strong></h6>
+        </span></p>
 
         <h6><span style="color: #A72B4D">Wednesday 15<sup>th</sup> January 2014 at 12.30-13.15</span></h6>
 
@@ -70,9 +70,9 @@
       <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
         <h5><span style="color: #A72B4D">Androgens and prostate cancer: <br>source, role and management*</span></h5>
 
-        <h6><strong><span style="color: #939598">
-             Dr Amit Bahl, Clinical Director and Consultant Oncologist <br>Bristol Haematology and Oncology Centre, University Hospitals Bristol 
-        </span></strong></h6>
+        <p><span style="color: #939598">
+             Dr Amit Bahl, Clinical Director and Consultant Oncologist <br>Bristol Haematology and Oncology Centre, University Hospitals Bristol
+        </span></p>
 
           <h6><span style="color: #A72B4D">Thursday 6<sup>th</sup> March 2014 at 12.30-13.15</span></h6>
       </a>
@@ -105,13 +105,13 @@
         <strong>Please fill in all fields and confirm that you are a healthcare professional. These webinars are intended for healthcare professionals only.</strong>
     </div> -->
 
-<div class="jumbotron">
+<div class="jumbotron" style="padding: 20px 72px 20px 68px;">
      <%= render 'layouts/title' %>
 
 
   <br>
   <h4>To register for this webinar series <br>please complete the following information:</h4>
-<div class="login span6">
+<div class="login span6 offset2">
 
 
     <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { class: 'form-horizontal'}) do |f| %>
@@ -133,7 +133,7 @@
           <h4><span style="color: rgb(167, 43, 77)">Unfortunately as you are not a healthcare professional you are not permitted to view these webinars.</span></h4>
         </div>
         <div class="modal-footer">
-          <%= link_to "Please click here to close the web page", "http://google.com", class: 'btn btn-primary btn-large' %>
+          <%= link_to "Close", archive_path %>
         </div>
       </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
@@ -146,16 +146,16 @@
                     <%= f.input :password, label: "Password:" %>
                     <%= f.input :password_confirmation, label: "Password confirmation:" %>
 
-              <div class="login span6 offset2">
+              <div class="login span6">
 
-                <h6>Please tick this box if you permit Astellas Oncology to send you two reminder emails prior to each live webinar, an email when each webinar is archived for viewing on the website and an email when a new webinar is added the programme.</h6>
+                <p>Please tick this box if you permit Astellas Oncology to send you two reminder emails prior to each live webinar, an email when each webinar is archived for viewing on the website and an email when a new webinar is added the programme.</p>
                     <%= f.input :reminder, :as => :boolean, :label => "Accept", :input_html => { :checked => "unchecked" } %>
 
-                <h6>Please tick this box if you permit Astellas Oncology to contact you in the future regarding other similar activities.</h6>
+                <p>Please tick this box if you permit Astellas Oncology to contact you in the future regarding other similar activities.</p>
                     <%= f.input :future, :as => :boolean, :label => "Accept", :input_html => { :checked => "unchecked" } %>
 
                 <br>
-        
+
                 <p>Once you have registered, a confirmation email will be sent to you.</p>
 
                 <div class="marketing">
@@ -171,7 +171,7 @@
 
 <% end %>
 </div>
-
+<%= render 'layouts/footer' %>
 </div>
-      <%= render 'layouts/prefooter' %>
+
 <% end %>

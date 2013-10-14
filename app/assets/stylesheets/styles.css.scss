@@ -80,7 +80,7 @@ body{
     -moz-border-bottom-colors: none;
     -moz-border-left-colors: none;
     border-image: none;
-    max-width: 70%;
+    max-width: 99%;
     min-width: 220px;
     border-radius: 0px 0px 0px 0px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
@@ -101,19 +101,6 @@ body{
     font-family: Arial;
     padding: 20px 10px 20px 10px;
     display: block;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgb(238, 238, 238) rgb(221, 221, 221) rgb(187, 187, 187);
-    -moz-border-top-colors: none;
-    -moz-border-right-colors: none;
-    -moz-border-bottom-colors: none;
-    -moz-border-left-colors: none;
-    border-image: none;
-    max-width: 99%;
-    min-width: 220px;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
-    background-repeat: no-repeat;
-    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
 
@@ -134,6 +121,7 @@ body{
 
 }
 
+
 .jumbotron h3 {
   text-shadow: .5px .5px rgba(0,0,0,0.15);
  }
@@ -143,6 +131,7 @@ body{
   font-size: 14px;
   margin-top:-2px;
   margin-bottom:-4px;
+  line-height: 1;
 }
 
 .jumbotron h4 i {
@@ -151,9 +140,13 @@ body{
 
 .jumbotron h5 {
   font-weight: 100;
-  color: rgb(135, 135, 133);  
+  color: rgb(135, 135, 133);
   font-size: 18pt;
-  margin-bottom: -3px;
+  line-height: 1.2;
+}
+
+.jumbotron h6 {
+    font-size: 18px;
 }
 
 
@@ -467,7 +460,7 @@ hr {
     -moz-border-bottom-colors: none;
     -moz-border-left-colors: none;
     border-image: none;
-    border-width: 1px 0px;
+    border-width: 3px 0px;
     border-style: solid none;
     border-color: rgb(204, 204, 204) -moz-use-text-color lightgray;
 }
@@ -475,6 +468,17 @@ hr {
 .img-polaroid-orange {
     padding: 4px;
     margin-bottom: 6px;
+    margin-top: 15px;
     border: 3px solid rgb(217, 83, 30);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
 }
+
+
+
+// Feedback Form
+
+input.radio_buttons.optional {
+    margin-right: 12px;
+}
+
+

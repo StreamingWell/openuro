@@ -1,21 +1,16 @@
-<div class="jumbotron">
+<div class="row">
   <h1>Prostate Cancer Lunchtime Webinars</h1>
   <h4><i>A multidisciplinary approach to prostate cancer understanding and management</i></h4>
-
   <br>
   <h4>To register for this webinar series please complete the following information:</h4>
-<div class="login span6">
-
+  <div class="login span6">
     <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { class: 'form-horizontal'}) do |f| %>
-
           <p>Are you a healthcare professional? Please select either yes or no:</p>
-
           <div class="marketing">
              <button type="button" class="btn btn-primary btn-large" data-toggle="collapse" data-target="#demo">Yes</button>
                          <!-- Button trigger modal -->
             <a data-toggle="modal" href="#myModal" class="btn btn-danger btn-large">No</a>
           </div>
-
           <br></br>
   <!-- Modal -->
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
@@ -47,7 +42,7 @@
                     <%= f.input :future, :as => :boolean, :label => "Accept", :input_html => { :checked => "checked" } %>
 
                 <br>
-        
+
                 <p>Once you have registered, a confirmation email will be sent to you.</p>
 
                 <div class="marketing">
@@ -66,4 +61,4 @@
 
 </div>
 
-      <%= render 'layouts/prefooter' %>
+      <%= render 'layouts/footer' %>
