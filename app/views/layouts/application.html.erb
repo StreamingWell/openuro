@@ -1,26 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>Prostate Cancer Lunchtime Webinars</title>
     <%= stylesheet_link_tag    "application", :media => "all" %>
     <%= javascript_include_tag 'application' %>
     <%= csrf_meta_tags %>
-    
     <%= tag :meta, name: "viewport", content: "width=device-width, initial-scale=1.0" %>
-
     <!-- Cookie Script? -->
     <!-- <script src='http://ico-cookie-warning.googlecode.com/svn/trunk/ico_cookies.js'></script> -->
   </head>
   <body>
-      <%= render 'layouts/header' %>
-
     <div class="container">
-        <% flash.each do |name, msg| %>
-          <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
-        <% end %>
-        <%= yield %>
-      
+      <%= render 'layouts/header' %>
+      <%= render 'layouts/messages' %>
+      <%= yield %>
     </div>
-
   </body>
 </html>

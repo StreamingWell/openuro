@@ -6,38 +6,41 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </a>
-       
-       <a class="brand" href="/"><!-- <img src="assets/astellas-oncology.png"/>--></a>
-        <% if user_signed_in? %>
 
-        <div class="nav-collapse pull-right collapse">
-          <ul class="nav">
-             <li>
-              <%= link_to "Home", root_path %>
-            </li>
-             <li>
+      <a class="brand" href="/"><!-- <img src="assets/astellas-oncology.png"/>--></a>
+      <% if user_signed_in? %>
+
+      <div class="nav-collapse pull-right collapse">
+        <ul class="nav">
+         <li>
+          <%= link_to "Home", root_path %>
+        </li>
+            <!-- <li>
               <%= link_to "Live Webcasts", live_path %>
             </li>
             <li>
 							<%= link_to "Archived Webcasts", archive_path %>
-						</li>	
+						</li>	-->
 						<li>
-							<%= link_to "Prescribing Information", "/XTANDI PI.pdf" %>
+							<a href= "/XTANDI PI.pdf", target="_blank">Prescribing Information</a>
 						</li>
-            <!-- <li><%= link_to "Edit Profile", edit_user_registration_path %></li>-->
-            <li><%= link_to "Leave Feedback", evaluation_path %></li>
+
+            <li><a href="mailto:rummy.ladwa@succinctcomms.com">Contact Us</a> </li>
+
+            <!-- <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+            <li><%= link_to "Leave Feedback", evaluation_path %></li> -->
             <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
-            </ul>
-              <% else %>
+          </ul>
+          <% else %>
           <div class="nav-collapse pull-right collapse">
-              <ul class="nav">
-                <li><%= link_to "Register", home_path %></li>
-                <li><%= link_to "Login", login_path %></li>
-                <li><%= link_to 'Forgot your password?', new_password_path(resource_name) %></li>
+            <ul class="nav">
+              <li><%= link_to "Register", new_user_registration_path %></li>
+              <li><%= link_to "Login", login_path %></li>
+              <li><%= link_to 'Forgot your password?', new_password_path(resource_name) %></li>
 
               <% end %>
             </ul>
-                </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>

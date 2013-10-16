@@ -5,12 +5,12 @@ class ContactController < ApplicationController
   end
 
   def create
+    @user = current_user
     @message = Message.new(params[:message])
 
     if @message.valid?
       @success = true
-      NotificationsMailer.new_message(@message).deliver
-      # redirect_to(live_path, :notice => "Message was successfully sent.")
+      NotificationsMailer.new_message(@message, @user).deliver
       respond_to do |format|
         format.js
         format.html

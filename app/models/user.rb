@@ -1,16 +1,14 @@
 class User < ActiveRecord::Base
-  # Include default devise modules. Others available are:
-  # :token_authenticatable, :confirmable,
-  # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  # Setup accessible (or protected) attributes for your model
-  attr_accessible :name, :email, :company, :job, :password, :password_confirmation, :remember_me, :hcp, :nothcp, :reminder, :future
-  # attr_accessible :title, :body
+  attr_accessible :name, :email, :company, :job, :password,
+                  :password_confirmation, :remember_me, :hcp, :nothcp, :reminder, :future
 
   INVALID_EMAILS = %w(gmail.com googlemail.com hotmail.co.uk hotmail.com live.co.uk yahoo.com yahoo.co.uk outlook.com outlook.co.uk icloud.com ymail.com mail.com bigstring.com)
-  validates_format_of :email, :without => /#{INVALID_EMAILS.map{|a| Regexp.quote(a)}.join('|')}/, :message => "Please register using your work email address."
+  validates_format_of :email,
+                      :without => /#{INVALID_EMAILS.map{|a| Regexp.quote(a)}.join('|')}/,
+                      :message => "Please register using your work email address."
 
   after_create :send_user_and_admin_notification
 

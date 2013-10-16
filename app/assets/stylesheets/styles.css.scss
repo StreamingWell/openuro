@@ -4,16 +4,26 @@ $btnPrimaryBackground: purple;
 
 @import 'bootstrap';
 body{
-    padding-top: 0px;
-
+    padding-top: 10px;
+    background-image: url('web-bg-1680.jpg');
+    background-repeat: no-repeat;
     color: rgb(147, 149, 152);
+
 
 }
 
 @import 'bootstrap-responsive';
 
 .navbar .container {
-	max-width: 1024px;
+	max-width: 950px;
+    border: none;
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;
+    border-radius: 0px 0px 0px 0px;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
 }
 
 .navbar .nav {
@@ -61,6 +71,19 @@ body{
 
 .container {
 	max-width: 1024px;
+    margin-top:20px;
+    padding: 4px;
+    background-color: #fff;
+    border: none;
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;
+    max-width: 99%;
+    min-width: 220px;
+    border-radius: 0px 0px 0px 0px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
 }
 
 .jumbotron {
@@ -68,20 +91,8 @@ body{
 	font-family: Arial;
 	padding: 20px 10px 20px 10px;
 	display: block;
-	border-width: 1px;
-	border-style: solid;
-	border-color: rgb(238, 238, 238) rgb(221, 221, 221) rgb(187, 187, 187);
-	-moz-border-top-colors: none;
-	-moz-border-right-colors: none;
-	-moz-border-bottom-colors: none;
-	-moz-border-left-colors: none;
-	border-image: none;
-	max-width: 99%;
-	min-width: 220px;
-	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
-	background-image: url('web-bg.jpg');
+	max-width: 1024px;
 	background-repeat: no-repeat;
-	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
 
@@ -90,20 +101,17 @@ body{
     font-family: Arial;
     padding: 20px 10px 20px 10px;
     display: block;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgb(238, 238, 238) rgb(221, 221, 221) rgb(187, 187, 187);
-    -moz-border-top-colors: none;
-    -moz-border-right-colors: none;
-    -moz-border-bottom-colors: none;
-    -moz-border-left-colors: none;
-    border-image: none;
-    max-width: 99%;
-    min-width: 220px;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
-    background-repeat: no-repeat;
-    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1);
     overflow: hidden;
+}
+
+
+.jumbotron li {
+    content: "• ";
+    color: rgb(217, 83, 30); /* or whatever color you prefer */
+}
+
+.jumbotron li p {
+    color: #939598;
 }
 
 .jumbotron h1 {
@@ -113,6 +121,7 @@ body{
 
 }
 
+
 .jumbotron h3 {
   text-shadow: .5px .5px rgba(0,0,0,0.15);
  }
@@ -121,6 +130,8 @@ body{
   font-weight: 100;
   font-size: 14px;
   margin-top:-2px;
+  margin-bottom:-4px;
+  line-height: 1;
 }
 
 .jumbotron h4 i {
@@ -129,9 +140,13 @@ body{
 
 .jumbotron h5 {
   font-weight: 100;
-  color: rgb(135, 135, 133);  
+  color: rgb(135, 135, 133);
   font-size: 18pt;
-  margin-bottom: -3px;
+  line-height: 1.2;
+}
+
+.jumbotron h6 {
+    font-size: 18px;
 }
 
 
@@ -349,10 +364,10 @@ element.style {
     font-weight: 200;
     color: rgb(119, 119, 119);
     text-shadow: 0px 1px 0px white;
-    background-image: url('/assets/astellas-oncology.png');
+    background-image: url('/assets/Astellas_Oncology_Horizontal_Logo_With_Tagline_270.jpg');
     background-repeat: no-repeat;
-    padding-top: 25px;
-    padding-left: 200px;
+    padding-top: 45px;
+    padding-left: 300px;
     margin-top: 10px;
 }
 
@@ -445,7 +460,25 @@ hr {
     -moz-border-bottom-colors: none;
     -moz-border-left-colors: none;
     border-image: none;
-    border-width: 1px 0px;
+    border-width: 3px 0px;
     border-style: solid none;
     border-color: rgb(204, 204, 204) -moz-use-text-color lightgray;
 }
+
+.img-polaroid-orange {
+    padding: 4px;
+    margin-bottom: 6px;
+    margin-top: 15px;
+    border: 3px solid rgb(217, 83, 30);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+
+
+// Feedback Form
+
+input.radio_buttons.optional {
+    margin-right: 12px;
+}
+
+

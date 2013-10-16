@@ -1,19 +1,22 @@
 <% if user_signed_in? %>
 
-<div class="jumbotron">
+<div class="jumbotron" style="padding: 20px 72px 20px 68px;">
 	<%= render 'layouts/title' %>
 	<br>
-	
+
 	<br>
 	<h3><span style="color: rgb(167, 43, 77)">Working together: organising care for <br>optimal management of prostate cancer</span></h3>
-	<h6>
+	<p>
 		Dr Simon Hughes, Consultant in Clinical Oncology and <br>Ms Louisa Fleure, Advanced Prostate Cancer Specialist Nurse, Guy's Hospital, London
-	</h6>
+	</p>
 
 	<img src="assets/webcast.png"/>
 
 	<div class="timer">
 		<script type="text/javascript" src="http://cdn.widgetserver.com/syndication/subscriber/InsertWidget.js"></script><script type="text/javascript">if (WIDGETBOX) WIDGETBOX.renderWidget('33a42047-6125-49af-bcf1-59036a8d9016');</script>
+
+		<div id="defaultCountdown"></div>
+
 	</div>
 <br>
 </br>
@@ -24,7 +27,7 @@
 
 	<hr>
 
-	
+
 
 	<h4><span style="color: rgb(167, 43, 77)">
 		Please submit a question in the box below:
@@ -44,8 +47,7 @@
 </div>
 		<%= simple_form_for @message, :url => contact_path, method: :post, remote: true, html: { class: "form-horizontal"} do |form| %>
 
-			  <%= form.input :name, label: 'Name', required: false %>
-		  	  <%= form.input :body, label: 'Question', required: false, as: :text, input_html: { rows: "3" } %>
+		  	 <%= form.input :body, label: 'Question', required: false, as: :text, input_html: { rows: "3" } %>
 		  <br>
 		  </div>
 
@@ -64,9 +66,9 @@
       <%= render 'layouts/footer' %>
 
 <% else %>
-     
+
       <%= render 'layouts/preregistration' %>
 
-      <%= render 'layouts/prefooter' %>
+      <%= render 'layouts/footer' %>
 
 <% end %>

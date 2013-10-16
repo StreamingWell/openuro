@@ -1,6 +1,6 @@
 <% if user_signed_in? %>
 
-<div class="jumbotron">
+<div class="jumbotron" style="padding: 20px 72px 20px 68px;">
   <%= render 'layouts/title' %>
   <br>
   <br>
@@ -12,9 +12,9 @@
       <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
         <h5><span style="color: #A72B4D">Working together: organising care <br>for optimal management of prostate cancer</span></h5>
 
-         <h6><strong><span style="color: #939598">
+         <p><span style="color: #939598">
           Dr Simon Hughes, Consultant in Clinical Oncology and <br>Ms Louisa Fleure, Advanced Prostate Cancer Specialist Nurse, Guy's Hospital, London
-        </span></strong></h6>
+        </span></p>
 
         <h6><span style="color: #A72B4D">Tuesday 26<sup>th</sup> November 2013 at 12.30-13.15</span></h6>
 
@@ -22,7 +22,7 @@
     </div>
     <div id="collapseOne" class="accordion-body collapse in">
       <div class="accordion-inner">
-       
+
             <!-- <iframe src="//player.vimeo.com/video" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
             <!-- <img src="assets/archived-webcast.png"/> -->
             <!-- <%= link_to "Leave Feedback", evaluation_path, class: "btn btn-danger" %> -->
@@ -31,10 +31,14 @@
           <div class="row">
             <div class="span2">
               <br>
-              <img src="assets/dr-simon-hughes.jpg" class="img-polaroid">
-              <br>
-              </br>
-              <img src="assets/louisa-fleure.jpg" class="img-polaroid">
+              <img src="assets/dr-simon-hughes.jpg" class="img-polaroid-orange">
+                <h4><strong><span style="color:rgb(217, 83, 30)">Dr Simon Hughes</span></strong></h4>
+                <p style="margin-top: 4px;"><small>Guy's Hospital, London</small></p>
+
+
+              <img src="assets/louisa-fleure.jpg" class="img-polaroid-orange">
+                <h4><strong><span style="color:rgb(217, 83, 30)">Ms Louisa Fleure</span></strong></h4>
+                <p style="margin-top: 4px;"><small>Guy's Hospital, London</small></p>
             </div>
 
             <div class="next-webinar span5">
@@ -43,22 +47,24 @@
               <p>Dr Simon Hughes and Ms Louisa Fleure will provide expert first-hand insights regarding the successful management of patients with prostate cancer in a multidisciplinary team (MDT) setup.</p>
                 <br>
                   <p><strong>Topics:</strong></p>
-                  <p><li>The multidisciplinary team (MDT) structure and roles</li></p>
+                  <p><li><span style="color:#939598">The multidisciplinary team (MDT) structure and roles</span></li>
 
-                  <p><li>Managing patients with differing needs in an MDT environment</li></p>
+                  <p><li><span style="color:#939598">Managing patients with differing needs in an MDT environment</span></li></p>
 
-                  <p><ul><li>Newly diagnosed patients</li></p>
+                  <p><ul><li><span style="color:#939598">Newly diagnosed patients</span></li></p>
 
-                  <p><li>Patients with advanced disease</li></ul></p>
+                  <p><li><span style="color:#939598">Patients with advanced disease</span></li></ul></p>
 
-                  <p><li>Meeting the challenges of a ‘working’ MDT at Guy’s Hospital</li></p>
-
+                  <p><li><span style="color:#939598">Meeting the challenges of a ‘working’ MDT at Guy’s Hospital</span></li></p>
                 </div>
 
               </div>
           </br>
           <br>
-      </div>
+
+          <%= link_to "Live Webcast", live_path, class: "btn btn-primary" %>
+          <%= link_to "Archived Webcast", archive_path, class: "btn btn-danger" %>
+        </div>
     </div>
   </div>
 
@@ -71,9 +77,9 @@
       <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
         <h5><span style="color: #A72B4D">Maximising quality of life for patients <br>with advanced prostate cancer</span></h5>
 
-        <h6><strong><span style="color: #939598">
-             Lawrence Drudge-Coates, Uro-Oncology Clinical Nurse Specialist <br>and Honorary Lecturer King’s College Hospital NHS Foundation Trust, London
-        </span></strong></h6>
+        <p><span style="color: #939598">
+             Mr Lawrence Drudge-Coates, Uro-Oncology Clinical Nurse Specialist <br>and Honorary Lecturer King’s College Hospital NHS Foundation Trust, London
+        </span></p>
 
         <h6><span style="color: #A72B4D">Wednesday 15<sup>th</sup> January 2014 at 12.30-13.15</span></h6>
       </a>
@@ -89,7 +95,10 @@
           <div class="row">
             <div class="span2">
               <br>
-              <img src="assets/lawrence-druge-coates.jpg" class="img-polaroid">
+              <img src="assets/lawrence-druge-coates.jpg" class="img-polaroid-orange">
+                <h4><strong><span style="color:rgb(217, 83, 30)">Mr Lawrence Drudge-Coates</span></strong></h4>
+                <p></p>
+                <p style="line-height: 14px;"><small>King’s College Hospital NHS Foundation Trust, London</small></p>
             </div>
 
             <div class="next-webinar span5">
@@ -97,17 +106,23 @@
           <p>Mr Lawrence Drudge-Coates will discuss how balancing quantity and quality of life is a key factor in a patient’s choice of treatment, particularly as the number of treatment options is increasing significantly both in quantity and complexity.</p>
             <br>
               <p><strong>Topics:</strong></p>
-              <p><li>Impact on quality of life of treatments used in advanced prostate cancer</li></p>
+              <p><li><span style="color:#939598">Impact on quality of life of treatments used in advanced prostate cancer</span></li></p>
 
-              <p><li> Management of side-effects of treatments used in advanced prostate cancer</li></p>
+              <p><li><span style="color:#939598">Management of side-effects of treatments used in advanced prostate cancer</span></li></p>
 
-              <p><li>Helping patients balance quality and quantity of life</li></p>
+              <p><li><span style="color:#939598">Helping patients balance quality and quantity of life</span></li></p>
 
             </div>
 
           </br>
 
           <br>
+        </br>
+
+          <%= link_to "Live Webcast", live_path, class: "btn btn-primary" %>
+          <%= link_to "Archived Webcast", archive_path, class: "btn btn-danger" %>
+          <br>
+        </br>
       </div>
     </div>
   </div>
@@ -120,9 +135,9 @@
       <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
         <h5><span style="color: #A72B4D">Androgens and prostate cancer: <br>source, role and management*</span></h5>
 
-        <h6><strong><span style="color: #939598">
-             Dr Amit Bahl, Clinical Director and Consultant Oncologist <br>Bristol Haematology and Oncology Centre, University Hospitals Bristol 
-        </span></strong></h6>
+       <p><span style="color: #939598">
+             Dr Amit Bahl, Clinical Director and Consultant Oncologist <br>Bristol Haematology and Oncology Centre, University Hospitals Bristol
+        </span></p>
 
           <h6><span style="color: #A72B4D">Thursday 6<sup>th</sup> March 2014 at 12.30-13.15</span></h6>
       </a>
@@ -137,32 +152,27 @@
             <!-- <%= link_to "Leave Feedback", evaluation_path, class: "btn btn-danger" %> -->
 
 
-        <div class="row">
+        <div class="row" style="height: 330px;">
           <div class="span2">
             <br>
-            <img src="assets/amit-bahl.jpg" class="img-polaroid">
-        </div>
+            <img src="assets/amit-bahl.jpg" class="img-polaroid-orange" />
+            <h4><strong><span style="color:rgb(217, 83, 30)">Dr Amit Bahl</span></strong></h4>
+            <p style="line-height: 14px; margin-top: 6px;"><small>Bristol Haematology and Oncology Centre</small></p>
+          </div>
 
-        <div class="next-webinar span5">
-          <p><strong>Summary:</strong></p>
-          <p>Dr Amit Bahl will provide an overview of the role of androgens in prostate cancer and how different treatment options, old and new, can modulate the production or action of androgens and reduce the progression of disease.</p>
-            <br>
-              <p><strong>Topics:</strong></p>
-              <p><li>Sites of androgen production and its effect on prostate cancer</li></p>
-
-              <p><li>Treatments that affect androgen production or action</li></p>
-
-              <p><li> Enzalutamide clinical trial data and clinical experience</li></p>
-
-            </div>
+          <div class="next-webinar span5">
+            <p><strong>Summary:</strong></p>
+            <p>Dr Amit Bahl will provide an overview of the role of androgens in prostate cancer and how different treatment options, old and new, can modulate the production or action of androgens and reduce the progression of disease.</p>
+            <p><strong>Topics:</strong></p>
+            <p><li><span style="color:#939598">Sites of androgen production and its effect on prostate cancer</span></li></p>
+            <p><li><span style="color:#939598">Treatments that affect androgen production or action</span></li></p>
+            <p><li><span style="color:#939598">Enzalutamide clinical trial data and clinical experience</span></li></p>
+          </div>
       </div>
+      <%= link_to "Live Webcast", live_path, class: "btn btn-primary" %>
+      <%= link_to "Archived Webcast", archive_path, class: "btn btn-danger" %>
     </div>
   </div>
-
-<br>
-      <small>
-        Contact us: <a href="mailto:rummy.ladwa@succinctcomms.com">rummy.ladwa@succinctcomms.com</a>
-      </small>
 
 </div>
 </div>
@@ -175,9 +185,9 @@
       <%= render 'layouts/footer' %>
 
 <% else %>
-     
+
       <%= render 'layouts/preregistration' %>
 
-      <%= render 'layouts/prefooter' %>
+      <%= render 'layouts/footer' %>
 
 <% end %>

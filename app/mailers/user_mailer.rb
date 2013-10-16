@@ -6,4 +6,5 @@ class UserMailer < ActionMailer::Base
     @user = user
     mail(subject: 'Log-in details for the Prostate Cancer Lunchtime Webinars', to: user.email)
   end
+
 end

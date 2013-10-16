@@ -5,13 +5,17 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'simple_form'
 gem 'newrelic_rpm'
+gem 'thin'
 
 group :production do
 	gem 'pg'
+  gem 'rails_12factor'
 end
 
 group :development, :test do
 	gem 'sqlite3'
+  gem 'better_errors'
+  gem 'quiet_assets'
 end
 
 group :assets do

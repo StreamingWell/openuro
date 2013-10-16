@@ -1,6 +1,6 @@
 <% if user_signed_in? %>
 
-<div class="jumbotron">
+<div class="jumbotron" style="padding: 20px 72px 20px 68px;">
   <%= render 'layouts/title' %>
   <br>
   <br>
@@ -22,7 +22,7 @@
     </div>
     <div id="collapseOne" class="accordion-body collapse in">
       <div class="accordion-inner">
-       
+
             <!-- <iframe src="//player.vimeo.com/video" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
             <!-- <img src="assets/archived-webcast.png"/> -->
             <!-- <%= link_to "Leave Feedback", evaluation_path, class: "btn btn-danger" %> -->
@@ -31,8 +31,10 @@
           <div class="row">
             <div class="span2">
               <br>
-              <img src="assets/dr-simon-hughes.jpg" class="img-polaroid">
-              <img src="assets/louisa-fleure.jpg" class="img-polaroid">
+              <img src="assets/dr-simon-hughes.jpg" class="img-polaroid-orange">
+              <h4>Dr Simon Hughes</h4>
+              <img src="assets/louisa-fleure.jpg" class="img-polaroid-orange">
+
             </div>
 
             <div class="next-webinar span5">
@@ -41,7 +43,7 @@
               <p>Dr Simon Hughes and Ms Louisa Fleure will provide expert first-hand insights regarding the successful management of patients with prostate cancer in a multidisciplinary team (MDT) setup.</p>
                 <br>
                   <p><strong>Topics:</strong></p>
-                  <p><li>The multidisciplinary team (MDT) structure and roles</li></p>
+                  <p><span style="color: #939598"><li>The multidisciplinary team (MDT) structure and roles</li></span></p>
 
                   <p><li>Managing patients with differing needs in an MDT environment</li></p>
 
@@ -119,7 +121,7 @@
         <h5><span style="color: #A72B4D">Androgens and prostate cancer: <br>source, role and management*</span></h5>
 
         <h6><strong><span style="color: #939598">
-             Dr Amit Bahl, Clinical Director and Consultant Oncologist <br>Bristol Haematology and Oncology Centre, University Hospitals Bristol 
+             Dr Amit Bahl, Clinical Director and Consultant Oncologist <br>Bristol Haematology and Oncology Centre, University Hospitals Bristol
         </span></strong></h6>
 
           <h6><span style="color: #A72B4D">Thursday 6<sup>th</sup> March 2014 at 12.30-13.15</span></h6>
@@ -157,11 +159,6 @@
     </div>
   </div>
 
-<br>
-      <small>
-        Contact us: <a href="mailto:rummy.ladwa@succinctcomms.com">rummy.ladwa@succinctcomms.com</a>
-      </small>
-
 </div>
 </div>
 </div>
@@ -176,7 +173,7 @@
         <strong>Please fill in all fields and confirm that you are a healthcare professional. These webinars are intended for healthcare professionals only.</strong>
     </div> -->
 
-<div class="jumbotron">
+<div class="jumbotron" style="padding: 20px 72px 20px 68px;">
      <%= render 'layouts/title' %>
 
 
@@ -203,7 +200,7 @@
             <%= f.input :future, :as => :boolean, :label => "Accept", :input_html => { :checked => "checked" } %>
 
         <br>
-        
+
         <p>Once you have registered, a confirmation email will be sent to you.</p>
 
         <br>
@@ -234,12 +231,7 @@
 <% end %>
 </div>
 
-      <br>
-        
-        <small>
-          Contact us: <a href="mailto:rummy.ladwa@succinctcomms.com">rummy.ladwa@succinctcomms.com</a>
-        </small>
 </div>
-      <%= render 'layouts/prefooter' %>
+      <%= render 'layouts/footer' %>
 <% end %>
 

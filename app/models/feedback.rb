@@ -4,10 +4,9 @@ class Feedback
   include ActiveModel::Conversion
   extend ActiveModel::Naming
 
-  attr_accessor :high, :middle, :low, :first, :second, :third, :very, :partly, :irrelevant, :good, :satisfactory, :poor, :body, :comment
+  attr_accessor :lecture, :relevance, :info_presented, :likelihood_change,
+                :technical, :body, :comment
 
-  validates :high, :middle, :low, :first, :second, :third, :very, :partly, :irrelevant, :good, :satisfactory, :poor, :body, :comment, :presence => true
-  
   def initialize(attributes = {})
     attributes.each do |name, value|
       send("#{name}=", value)
