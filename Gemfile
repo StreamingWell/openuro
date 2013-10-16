@@ -16,6 +16,7 @@ group :development, :test do
 	gem 'sqlite3'
   gem 'better_errors'
   gem 'quiet_assets'
+  gem 'letter_opener'
 end
 
 group :assets do

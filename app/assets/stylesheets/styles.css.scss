@@ -8,8 +8,6 @@ body{
     background-image: url('web-bg-1680.jpg');
     background-repeat: no-repeat;
     color: rgb(147, 149, 152);
-
-
 }
 
 @import 'bootstrap-responsive';
@@ -121,7 +119,6 @@ body{
 
 }
 
-
 .jumbotron h3 {
   text-shadow: .5px .5px rgba(0,0,0,0.15);
  }
@@ -148,7 +145,6 @@ body{
 .jumbotron h6 {
     font-size: 18px;
 }
-
 
 .login {
 	text-align: left;
@@ -185,6 +181,7 @@ body{
     background-repeat: none !important;
     border-color: none !important;
 }
+
 h1, h2, h3 {
     line-height: 30px;
 }
@@ -473,12 +470,8 @@ hr {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-
-
 // Feedback Form
 
 input.radio_buttons.optional {
     margin-right: 12px;
 }
-
-
