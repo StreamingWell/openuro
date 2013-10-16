@@ -63,13 +63,13 @@ module Openmicrosite
     config.assets.initialize_on_precompile = false
 
     # Email configuration for Mandrill
-    config.action_mailer.smtp_settings = {
-      :address              => "smtp.mandrillapp.com",
-      :port                 => 587,
-      :domain               => "http://heroku.com",
-      :user_name            => "app17619065@heroku.com",
-      :password             => "pnHua4WntMuoYdhCnpS4Yg",
-      :authentication       => :plain,
+    ActionMailer::Base.smtp_settings = {
+      :address        => 'smtp.sendgrid.net',
+      :port           => '587',
+      :authentication => :plain,
+      :user_name      => ENV['SENDGRID_USERNAME'],
+      :password       => ENV['SENDGRID_PASSWORD'],
+      :domain         => 'heroku.com',
       :enable_starttls_auto => true
     }
 
