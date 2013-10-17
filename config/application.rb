@@ -62,7 +62,7 @@ module Openmicrosite
     # Required for Devise on Heroku
     config.assets.initialize_on_precompile = false
 
-    # Email configuration for Mandrill
+    # Email configuration for Sendgrid
     ActionMailer::Base.smtp_settings = {
       :address        => 'smtp.sendgrid.net',
       :port           => '587',
@@ -73,19 +73,6 @@ module Openmicrosite
       :enable_starttls_auto => true
     }
 
-    # Email configuration for SendGrid with Devise and Heroku
-    # config.action_mailer.default_url_options = { :host => 'http://warm-dawn-9465.herokuapp.com' }
-    # ActionMailer::Base.smtp_settings = {
-    #  :address        => "smtp.sendgrid.net",
-    #  :port           => "25",
-    #  :authentication => :plain,
-    #  :user_name      => ENV['app17619065@heroku.com'],
-    #  :password       => ENV['ulcraesp'],
-    #  :domain         => ENV['http://warm-dawn-9465.herokuapp.com']
-    #}
-
-    config.action_mailer.default_url_options = {
-      :host => "http://warm-dawn-9465.herokuapp.com"
-    }
+    config.action_mailer.default_url_options = { :host => "http://warm-dawn-9465.herokuapp.com" }
   end
 end
