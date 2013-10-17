@@ -73,6 +73,6 @@ module Openmicrosite
       :enable_starttls_auto => true
     }
 
-    config.action_mailer.default_url_options = { :host => "http://warm-dawn-9465.herokuapp.com" }
+    config.action_mailer.default_url_options = { :host => "warm-dawn-9465.herokuapp.com" }
   end
 end
