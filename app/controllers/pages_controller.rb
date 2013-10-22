@@ -24,9 +24,6 @@ class PagesController < ApplicationController
   def pi
   end
 
-  def holding
-  end
-
   def preregistration
   end
 
