@@ -6,12 +6,9 @@ class Feedback
 
   attr_accessor :lecture, :relevance, :info_presented, :likelihood_change,
                 :technical, :body, :comment
-<<<<<<< HEAD
 
   validates :lecture, :relevance, :info_presented, :likelihood_change,
             :body, :technical, presence: true
-=======
->>>>>>> b55e639e2a9e85541f1621448a7c092bdd616925
 
   validates :lecture, :relevance, :info_presented, :likelihood_change,
             :body, :technical, presence: true
