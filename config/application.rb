@@ -62,30 +62,17 @@ module Openmicrosite
     # Required for Devise on Heroku
     config.assets.initialize_on_precompile = false
 
-    # Email configuration for Mandrill
-    config.action_mailer.smtp_settings = {
-      :address              => "smtp.mandrillapp.com",
-      :port                 => 587,
-      :domain               => "http://heroku.com",
-      :user_name            => "app17619065@heroku.com",
-      :password             => "pnHua4WntMuoYdhCnpS4Yg",
-      :authentication       => :plain,
+    # Email configuration for Sendgrid
+    ActionMailer::Base.smtp_settings = {
+      :address        => 'smtp.sendgrid.net',
+      :port           => '587',
+      :authentication => :plain,
+      :user_name      => ENV['SENDGRID_USERNAME'],
+      :password       => ENV['SENDGRID_PASSWORD'],
+      :domain         => 'heroku.com',
       :enable_starttls_auto => true
     }
 
-    # Email configuration for SendGrid with Devise and Heroku
-    # config.action_mailer.default_url_options = { :host => 'http://warm-dawn-9465.herokuapp.com' }
-    # ActionMailer::Base.smtp_settings = {
-    #  :address        => "smtp.sendgrid.net",
-    #  :port           => "25",
-    #  :authentication => :plain,
-    #  :user_name      => ENV['app17619065@heroku.com'],
-    #  :password       => ENV['ulcraesp'],
-    #  :domain         => ENV['http://warm-dawn-9465.herokuapp.com']
-    #}
-
-    config.action_mailer.default_url_options = {
-      :host => "http://warm-dawn-9465.herokuapp.com"
-    }
+    config.action_mailer.default_url_options = { :host => "warm-dawn-9465.herokuapp.com" }
   end
 end

@@ -11,7 +11,6 @@ class ContactController < ApplicationController
     if @message.valid?
       @success = true
       NotificationsMailer.new_message(@message, @user).deliver
-      # redirect_to(live_path, :notice => "Message was successfully sent.")
       respond_to do |format|
         format.js
         format.html

@@ -1,5 +1,4 @@
 class NotificationsMailer < ActionMailer::Base
-
   default :from => "noreply@astellasoncology.co.uk"
   default :to => "branden.mittra@streamingwell.com"
 

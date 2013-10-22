@@ -3,8 +3,8 @@ class AdminMailer < ActionMailer::Base
   default :to => "branden.mittra@streamingwell.com"
 
   def registration_notification(user)
-      @user = user
-      mail(subject: "New Registration")
+    @user = user
+    mail(subject: "New Registration")
   end
 
 end

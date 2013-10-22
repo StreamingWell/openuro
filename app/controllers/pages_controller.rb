@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+
+  # remove this before deploying to production
   before_filter :authenticate
 
   def home
@@ -7,6 +9,14 @@ class PagesController < ApplicationController
   def live
     @message = Message.new
   end
+
+  def live_jan_15
+    @message = Message.new
+  end
+  
+  def live_mar_6
+    @message = Message.new
+  end  
 
   def archive
   end

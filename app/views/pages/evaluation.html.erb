@@ -18,11 +18,11 @@
 <div class="login span8">
 		<%= simple_form_for @feedback, :url => feedback_path, method: :post, html: { class: "form-horizontal"} do |form| %>
 
-			<h4>Q1: Which lecture did you attend?</h4>
+			<h4>Firstly, please indicate which webinar you are providing feedback for?</h4>
 				<%= form.input :lecture, as: :radio_buttons, collection: ['Working together: organising care for optimal management of prostate cancer', 'Maximising quality of life for patients with advanced prostate cancer', 'Androgens and prostate cancer: source, role and management'], label: false %>
 			<br>
 
-		<h4>Q1: How relevant did you find the information presented to your day to day clinical work:</h4>
+		<h4>Q1: How relevant did you find the information presented to your day to day clinical work?</h4>
 
 			<%= form.input :relevance, as: :radio_buttons, collection: ['Very relevant', 'Partly relevant', 'Not at all relevant'], label: false %>
 			<br>
@@ -36,7 +36,7 @@
 			<%= form.input :likelihood_change, as: :radio_buttons, collection: ['Very likely', 'Quite likely', 'Unlikely'], label: false %>
 			<br>
 
-			<p>If you answered ‘very likely’ or ‘quite likely’ to the last question, please explain how in the following box:</p>
+			<p>Please explain your response in the following box</p>
   			<%= form.input :body, label: false, required: false, as: :text, input_html: { rows: "3" } %>
 
 		<br>
@@ -46,7 +46,7 @@
 			<%= form.input :technical, as: :radio_buttons, collection: ['Good', 'Satisfactory', 'Poor'], label: false %>
 			<br>
 
-  			<p>Please add any further comments below:</p>
+  			<p><strong>Please add any further comments below:</strong></p>
 		  	  <%= form.input :comment, label: false, required: false, as: :text, input_html: { rows: "3" } %>
 		  <br>
 		  <p>Thank you very much for your feedback.</p>
@@ -59,4 +59,3 @@
 		<% end %>
 	</div>
 </div>
-              <%= render 'layouts/evalfooter' %>
