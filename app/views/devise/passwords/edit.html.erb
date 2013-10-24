@@ -1,16 +1,19 @@
-<div class="jumbotron">
+<div class="jumbotron" style="padding: 20px 72px 20px 68px;">
   <h2>Change your password</h2>
 
-  <div class="login span6 offset2">
-  <%= simple_form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put, class: 'form-horizontal'}) do |f| %>
-    <%= f.error_notification %>
+    <div class="login span8 offset1">
+      <%= simple_form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put, class: 'form-horizontal'}) do |f| %>
+        <%= f.error_notification %>
 
-    <%= f.input :reset_password_token, :as => :hidden %>
-    <%= f.full_error :reset_password_token %>
+        <%= f.input :reset_password_token, :as => :hidden %>
+        <%= f.full_error :reset_password_token %>
 
-      <%= f.input :password, :label => "New password", :required => true, :autofocus => true %>
-      <%= f.input :password_confirmation, :label => "Confirm new password", :required => true %>
-  </div>
+        <div class="form-inputs">
+
+          <%= f.input :password, :label => "New password", :required => false, :autofocus => true %>
+          <%= f.input :password_confirmation, :label => "Confirm new password", :required => false %>
+        </div>
+    </div>
 
     <div class="form-actions">
       <%= f.button :submit, "Change my password", class: "btn btn-primary btn-large" %>
