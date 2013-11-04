@@ -14,7 +14,17 @@
       <%= render 'layouts/header' %>
       <%= render 'layouts/messages' %>
       <%= yield %>
+      
+      <% if user_signed_in? %>
+
       <%= render 'layouts/footer' %>
+    
+      <% else %>
+
+      <%= render 'layouts/prefooter' %>
+
+      <% end %>
+      
     </div>
   </body>
 </html>
