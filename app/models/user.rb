@@ -12,6 +12,7 @@ class User < ActiveRecord::Base
 
   after_create :send_user_and_admin_notification
 
+
   private
 
   	def send_user_and_admin_notification
