@@ -12,6 +12,61 @@ class User < ActiveRecord::Base
 
   after_create :send_user_and_admin_notification
 
+  def self.suitable_for_reminders
+    where(reminder: true)
+  end
+
+  # Reminder emails
+
+  def self.check_and_send_archive
+    # should be sent on following dates
+    # reminder_archive - sent nov 27th, jan 16, march 7
+    date1 = Date.new(2013, 11, 27)
+    date2 = Date.new(2014, 1, 16)
+    date3 = Date.new(2014, 3, 7)
+
+    # check if we are on one of the require days
+    # send the email to the users who have opted in
+    if date1.today? || date2.today? || date3.today?
+      users = self.suitable_for_reminders
+      users.each do |user|
+        UserMailer.archive_email(user).deliver
+      end
+    end
+  end
+
+  def self.check_and_send_one_day_reminders
+    # should be sent on the following dates
+    # reminder_one_day - sent on nov 25th, jan 14, march 5
+    date1 = Date.new(2013, 11, 25)
+    date2 = Date.new(2014, 1, 14)
+    date3 = Date.new(2014, 3, 5)
+
+    if date1.today? || date2.today? || date3.today?
+      users = self.suitable_for_reminders
+      users.each do |user|
+        UserMailer.reminder_one_day(user).deliver
+      end
+    end
+
+  end
+
+  def self.check_and_send_two_week_reminders
+    # should be sent on the following dates
+    #reminder_two_weeks - sent on nov 12, jan 1st, feb 20th
+    date1 = Date.new(2013, 11, 12)
+    date2 = Date.new(2014, 1, 1)
+    date3 = Date.new(2014, 2, 20)
+
+    if date1.today? || date2.today? || date3.today?
+      users = self.suitable_for_reminders
+      users.each do |user|
+        UserMailer.reminder_two_week(user).deliver
+      end
+    end
+
+  end
+
 
   private
 
