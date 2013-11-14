@@ -346,7 +346,7 @@
 			}
 		</style>
 	</head>
-    <body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
+    <body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0" background-image="http://streamingwell.tv/img/email-bg.jpg" background-repeat: "no repeat">
     	<center>
         	<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="backgroundTable">
             	<tr>
@@ -401,16 +401,16 @@
                                                             <div mc:edit="std_content00">
 
                                                           
-                                                                <p>Dear "Insert Delegate Name" </p>
+                                                                <p>Dear <%= @user.name %> </p>
 
-																<p>We are pleased to inform you that the webinar entitled "insert title", first presented by "insert name", from "insert place of work", on "insert date" is now available to view at your convenience. </p>
+																<p>We are pleased to inform you that the webinar entitled Working together: organising care for optimal management of prostate cancer, first presented by Dr Simon Hughes and Ms Louisa Fleure, from Guy's Hospital, London, on Tuesday 26<sup>th</sup> November 2013 is now available to view at your convenience. </p>
 																
 
 																<p>To watch this archived webinar, please use your log-in details as follows:</p>
 																
 
-																<p><strong>Username: </strong>"insert email address"</p>
-																<p><strong>Password: </strong>"insert user selected password"</p>
+																<p><strong>Username: </strong><%= @user.email %></p>
+																<p><strong>Password: </strong><%= @user.password %></p>
 																
 
 																<p>Please use these log-in details every time you wish to visit the webinar website: <a href="http://www.astellasoncology.co.uk">www.astellasoncology.co.uk</a></p>
@@ -418,13 +418,17 @@
 																
 																<p>The next live webinar is as follows:</p>
 
-																<p><strong>Date: </strong>"insert date"</p>
+																<p><strong>Date: </strong>Wednesday January 15<sup>th</sup> 2014</p>
 																<p><strong>Time: </strong>12.30 to 13.15</p>
-																<p><strong>Title: </strong>"insert title"</p>
-																<p><strong>Speaker(s): </strong>"insert name(s)" from "insert place of work"</p>
-																<p><strong>Summary: </strong>"insert summary from Leave Piece"</p>
-																<p><strong>Topics: </strong>"insert bullets from Leave Piece"</p>
-																
+																<p><strong>Title: </strong>Maximising quality of life for patients with advanced prostate cancer</p>
+																<p><strong>Speaker(s): </strong>Mr Lawrence Drudge-Coates from King’s College Hospital NHS Foundation Trust, London</p>
+																<p><strong>Summary: </strong>Mr Lawrence Drudge-Coates will discuss how balancing quantity and quality of life is a key factor in a patient’s choice of treatment, particularly as the number of treatment options is increasing significantly both in quantity and complexity.</p>
+																<p><strong>Topics: </strong></p>
+																	<p><li>Impact on quality of life of treatments used in advanced prostate cancer</li></p>
+
+              														<p><li> Management of side-effects of treatments used in advanced prostate cancer</li></p>
+
+              														<p><li>Helping patients balance quality and quantity of life</li></p>																
 														
 																<p>We do hope that you will be able to join us and you find the webinar interesting and informative.</p>
 
@@ -468,26 +472,27 @@
 																<br />
 																
 																<em>Please do not reply to this email</em>
-																<em>Date of preparation: October 2013 Job code: XTD13057UKh</em>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td colspan="2" valign="middle" id="utility">
-                                                            <div mc:edit="std_utility">
-                                                                
-                                                            	<small>Important: The information transmitted in this message is intended only for the person or entity to which it is addressed and may contain confidential and/or privileged material. Any review, retransmission, dissemination or other use of, or taking of any action in reliance upon, this information by persons or entities other than the intended recipient is prohibited. If you receive this message in error, please contact the sender and delete the material from any computer.</small>
+																<em>Date of preparation: November 2013 Job code: XTD13057UKh</em>
+                                                            <p><em>These webinars are organised and funded by Astellas Pharma Ltd.</em></p>
+												
+											
 
-                                                            	<br>
-                                                            </br>
+															<small>Important: The information transmitted in this message is intended only for the person or entity to which it is addressed and may contain confidential and/or privileged material. Any review, retransmission, dissemination or other use of, or taking of any action in reliance upon, this information by persons or entities other than the intended recipient is prohibited. If you receive this message in error, please contact the sender and delete the material from any computer.</small>
 
-                                                                &nbsp;<a href="*|UNSUB|*">unsubscribe from this list</a>&nbsp;
-                                                                                                                                                 <!-- // Begin PI \\ -->
+														<br>
+														<br>
+														&nbsp;<a href="*|UNSUB|*">unsubscribe from this list</a>&nbsp;
+
+														</div>
+													</td>
+												</tr>
+														
+														<!-- // Begin PI \\ -->
                                                                 <tr>
                                                         <td colspan="2" valign="left">
                                                             <div>
                              
-<p><img src="http://localhost:3000/assets/xtandi-logo-134.png" align="right"></p>
+<p><img src="http://warm-dawn-9465.herokuapp.com/assets/xtandi-logo-134.png" align="right"></p>
 
 <br>
 <br>     

@@ -346,7 +346,7 @@
 			}
 		</style>
 	</head>
-    <body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
+    <body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0" background-image="http://streamingwell.tv/img/email-bg.jpg" background-repeat: "no repeat">
     	<center>
         	<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="backgroundTable">
             	<tr>
@@ -403,25 +403,33 @@
                                                             <div mc:edit="std_content00">
 
                                                             	
-																<p><i>"Insert title of webinar"</i></p>
-																<p>"Insert speaker(s) name, insert place of work"</p>
-																<p>"Insert date"</p>
+																<p><i>Working together: organising care for optimal management of prostate cancer</i></p>
+																<p>Dr Simon Hughes, Consultant in Clinical Oncology and Ms Louisa Fleure, Advanced Prostate Cancer Specialist Nurse, Guy's Hospital, London</p>
+																<p>Tuesday 26<sup>th</sup> November 2013</p>
 
 																<br>
 																<p>Time: 12.30 to 13.15</p>
 																<br>
 
-                                                                <p>Dear "Insert Delegate Name" </p>
+                                                                <p>Dear <%= @user.name %> </p>
 
 																<p>Thank you for registering your interest in the Astellas Oncology live webinars.</p>
 
-																<p>This is just a reminder that at <strong>12.30 tomorrow</strong> "insert name(s)" from "insert place of work" shall be presenting a webinar entitled:</p>
+																<p>This is just a reminder that at <strong>12.30 tomorrow</strong> Dr Simon Hughes and Ms Louisa Fleure from Guy's Hospital, London shall be presenting a webinar entitled:</p>
 
-																<p><i>"insert title of webinar"</i></p>
+																<p><i>Working together: organising care for optimal management of prostate cancer</i></p>
 
 
 																<p>Topics that will be covered in this webinar include:</p>
-																<p>"Insert bullet summary from Leave Piece"</p>
+																   <p><li>The multidisciplinary team (MDT) structure and roles</li></p>
+
+												                   <p><li>Managing patients with differing needs in an MDT environment</li></p>
+
+												                   <p><ul><li>Newly diagnosed patients</li></p>
+
+												                   <p><li>Patients with advanced disease</li></ul></p>
+
+												                   <p><li>Meeting the challenges of a ‘working’ MDT at Guy’s Hospital</li></p></p>
 																<br>
 
 																<p>This live webinar will last for 45 minutes where the first 30 minutes will be the presentation and the last 15 minutes will be an interactive Q&A session with "insert speaker(s) name"</p>
@@ -431,8 +439,8 @@
 
 																<p>To watch the webinar live, please login at <a href="http://www.astellasoncology.co.uk">www.astellasoncology.co.uk</a>. Your log-in details are as follows:</p>
 
-																<p><strong>Username: </strong>"Insert email address"</p>
-																<p><strong>Password: </strong>"Insert password"</p>
+																<p><strong>Username: </strong><%= @user.email %></p>
+																<p><strong>Password: </strong><%= @user.password%></p>
 
 																<br>
 														
@@ -500,7 +508,7 @@
                                                             <div>
                                                       
 
-<p><img src="http://localhost:3000/assets/xtandi-logo-134.png" align="right"></p>
+<p><img src="http://warm-dawn-9465.herokuapp.com/assets/xtandi-logo-134.png" align="right"></p>
 
 <br>
 <br>

@@ -14,12 +14,17 @@ class UserMailer < ActionMailer::Base
 
   def reminder_two_week(user)
     @user = user
-    mail(subject: 'Two week reminder', to: user.email)
+    mail(subject: 'Reminder re the Prostate Cancer Lunchtime Webinar on January 15th 2014', to: user.email)
   end
 
   def archive_email(user)
     @user = user
-    mail(subject: 'Archive Email', to: user.email)
+    mail(subject: 'Notification that a recent Prostate Cancer Lunchtime Webinar is now available to view', to: user.email)
+  end
+
+  def evaluation_email(user)
+    @user = user
+    mail(subject: 'Feedback re the Prostate Cancer Lunchtime Webinar', to: user.email)
   end
 
 end

@@ -14,5 +14,6 @@ task :send_reminders => :environment do
     User.check_and_send_one_day_reminders
     User.check_and_send_two_week_reminders
     User.check_and_send_archive
+    User.check_and_send_evaluation
     puts 'Done!'
 end
