@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
                       :without => /#{INVALID_EMAILS.map{|a| Regexp.quote(a)}.join('|')}/,
                       :message => "Please register using your work email address."
 
-  # after_create :send_user_and_admin_notification
+  after_create :send_user_and_admin_notification
 
   def self.suitable_for_reminders
     where(reminder: true)
