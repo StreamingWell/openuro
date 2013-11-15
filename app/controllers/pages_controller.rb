@@ -31,7 +31,7 @@ class PagesController < ApplicationController
     @feedback = Feedback.new
   end
 
-  #protected
+  protected
 
     #def authenticate
   	#  authenticate_or_request_with_http_basic do |username, password|
