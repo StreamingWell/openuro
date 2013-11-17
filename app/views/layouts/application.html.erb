@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Prostate Cancer Lunchtime Webinars</title>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag 'application' %>
+    <%= csrf_meta_tags %>
+    <%= tag :meta, name: "viewport", content: "width=device-width, initial-scale=1.0" %>
+    <!-- Cookie Script? -->
+    <!-- <script src='http://ico-cookie-warning.googlecode.com/svn/trunk/ico_cookies.js'></script> -->
+  </head>
+  <body>
+    <div class="container">
+      <%= render 'layouts/header' %>
+      <%= render 'layouts/messages' %>
+      <%= yield %>
+      
+      <% if user_signed_in? %>
+
+      <%= render 'layouts/footer' %>
+    
+      <% else %>
+
+      <%= render 'layouts/prefooter' %>
+
+      <% end %>
+      
+    </div>
+  </body>
+</html>
