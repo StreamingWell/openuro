@@ -6,6 +6,7 @@ gem 'devise'
 gem 'simple_form'
 gem 'newrelic_rpm'
 gem 'thin'
+gem 'google-analytics-rails'
 
 group :production do
 	gem 'pg'

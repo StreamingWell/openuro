@@ -8,6 +8,7 @@
     <%= tag :meta, name: "viewport", content: "width=device-width, initial-scale=1.0" %>
     <!-- Cookie Script? -->
     <!-- <script src='http://ico-cookie-warning.googlecode.com/svn/trunk/ico_cookies.js'></script> -->
+    <%= analytics_init if Rails.env.production? %>
   </head>
   <body>
     <div class="container">
@@ -24,10 +25,6 @@
       <%= render 'layouts/prefooter' %>
 
       <% end %>
-
-      <% if Rails.env.production? %>  
-        <%= render 'layouts/google_analytics' %>
-      <% end %> 
       
     </div>
   </body>
