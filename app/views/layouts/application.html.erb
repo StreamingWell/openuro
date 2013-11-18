@@ -24,6 +24,10 @@
       <%= render 'layouts/prefooter' %>
 
       <% end %>
+
+      <% if Rails.env.production? %>  
+        <%= render 'layouts/google_analytics' %>
+      <% end %> 
       
     </div>
   </body>
