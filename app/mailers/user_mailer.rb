@@ -4,7 +4,7 @@ class UserMailer < ActionMailer::Base
 
   def welcome(user)
     @user = user
-    mail(subject: "Reminder re tomorrow's Prostate Cancer Lunchtime Webinar", to: user.email)
+    mail(subject: 'Log-in details for the Prostate Cancer Lunchtime Webinars', to: user.email)
   end
 
   def reminder_one_day(user)
