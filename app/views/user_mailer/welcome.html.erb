@@ -385,54 +385,59 @@
 									<td valign="top" class="bodyContent">
 
 										<!-- // Begin Module: Standard Postcard Content \\ -->
-										<table border="0" cellpadding="20" cellspacing="0" width="80%">
-											<tr mc:repeatable>
-												<td valign="top">
-													<div mc:edit="postcard_heading00">
-														<img src="http://img855.imageshack.us/img855/4207/aome.jpg">
-														<h1 class="h1"><span style="color: rgb(167, 43, 77)">Prostate Cancer Lunchtime Webinars</span></h1>
-														<h4><i>A multidisciplinary approach to prostate cancer understanding and management</i></h4>
-													</div>
-													<br>
-													<div mc:edit="std_content00">
-														<p>Dear <%= @user.name %></p>
+                                                <table border="0" cellpadding="20" cellspacing="0" width="80%">
+                                                    <tr mc:repeatable>
+                                                        <td valign="top">
+                                                        	<div mc:edit="postcard_heading00">
+                                                        		<img src="http://img855.imageshack.us/img855/4207/aome.jpg">
+                                                        		<br>
+                                                        	</br>
+                                                                <h1 class="h1"><span style="color: rgb(167, 43, 77)">Prostate Cancer Lunchtime Webinars</span></h1>
+																<h4><i>A multidisciplinary approach to prostate cancer understanding and management</i></h4>                                                            
+															</div>
+                                                            <br>
+                                                            <div mc:edit="std_content00">
 
-														<p>Thank you for registering your interest in the Astellas Oncology live webinars.</p>
-														<p><strong>Your log-in details are as follows:</strong></p>
-														<p><strong>Username:</strong> <%= @user.email %></p>
-														<p><strong>Password:</strong> <%= @user.password %></p>
+                                                            	
+																<p><i>"Insert Title"</i></p>
+																<p>"Insert Name(s) and Place of Work"</p>
+																<p>"Insert Date"</p>
 
-														<p>Please use these log-in details every time you wish to visit the webinar website: <%= new_user_session_url(host: 'www.astellasoncology.co.uk') %></p>
+																<p>Time: 12.30 to 13.15</p>
 
-														<br>
-														<p><strong>The next live webinar is as follows:</strong></p>
+                                                                <p>Dear <%= @user.name %> </p>
 
-														<p>Date: Tuesday 26<sup>th</sup> November 2013</p>
-														<p>Time: 12.30 to 13.15</p>
-														<p><strong>Title:</strong><i>  Working together: organising care for optimal management of prostate cancer</i></p>
-														<p><strong>Speaker(s):</strong>  Dr Simon Hughes, Consultant in Clinical Oncology and Ms Louisa Fleure, Advanced Prostate Cancer Specialist Nurse Guy's Hospital, London</p>
+																<p>Thank you for registering your interest in the Astellas Oncology live webinars.</p>
 
-														<p><strong>Summary:</strong>  Dr Simon Hughes and Ms Louisa Fleure will provide expert first-hand insights regarding the successful management of patients with prostate cancer in a multidisciplinary team (MDT) setup.</p>
+																<p>This is just a reminder that at <strong>12.30 tomorrow</strong> "Insert Name(s)" from "Insert Place of Work" shall be presenting a webinar entitled:</p>
 
-														<p><strong>Topics:</strong></p>
-														<p><li>The multidisciplinary team (MDT) structure and roles</li></p>
-
-														<p><li>Managing patients with differing needs in an MDT environment</li></p>
-
-														<p><li>Newly diagnosed patients</li></p>
-
-														<p><li>Patients with advanced disease</li></p>
-
-														<p><li>Meeting the challenges of a ‘working’ MDT at Guy’s Hospital</li></p>
-														<br>
-														<p>We do hope that you will be able to join us and you find the webinar interesting and informative.</p>
-
-														<p>Please note, details regarding speakers, topics and timings for the full webinar programme are available on the website.</p>
+																<p><i>"Insert Title"</i></p>
 
 
-														<p>Yours sincerely,</p>
+																<p>Topics that will be covered in this webinar include: "Insert bullets from leave piece"</p>
+																  
+																<br>
 
-														<p>Astellas Oncology</p>
+																<p>This live webinar will last for 45 minutes where the first 30 minutes will be the presentation and the last 15 minutes will be an interactive Q&A session with "Insert Name(s)".</p>
+
+																<p>Please note you will be able to submit your questions via the website during the live broadcast.</p>
+																
+
+																<p>To watch the webinar live, please login at <a href="http://www.astellasoncology.co.uk">www.astellasoncology.co.uk</a>. Your log-in details are as follows:</p>
+
+																<p><strong>Username: </strong><%= @user.email %></p>
+																<p><strong>Password: </strong>Your password was emailed to you when you first registered. If you have forgotten your password, please <a href="http://warm-dawn-9465.herokuapp.com/users/password/new">click here</a> to reset it.</p>
+
+																<br>
+														
+																<p>We do hope that you will be able to join us and you find the webinar interesting and informative.</p>
+
+																<p>Please note, details regarding speakers, topics and timings for the full webinar programme are available on the website.</p>
+
+
+																<p>Yours sincerely,</p>
+
+																<p>Astellas Oncology</p>
 
                                                         </td>
                                                     </tr>
@@ -467,7 +472,7 @@
 																<br />
 																
 																<em>Please do not reply to this email</em>
-																<em>Date of preparation: October 2013 Job code: XTD13057UKl</em>
+																<em>Date of preparation: November 2013 Job code: XTD13057UKTBC</em>
                                                             <p><em>These webinars are organised and funded by Astellas Pharma Ltd.</em></p>
 												
 											
