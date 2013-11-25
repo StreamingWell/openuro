@@ -9,7 +9,7 @@ class UserMailer < ActionMailer::Base
 
   def reminder_one_day(user)
     @user = user
-    mail(subject: 'One day reminder', to: user.email)
+    mail(subject: ' Reminder re tomorrow\'s Prostate Cancer Lunchtime Webinar', to: user.email)
   end
 
   def reminder_two_week(user)
