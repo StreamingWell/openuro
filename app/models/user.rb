@@ -18,22 +18,22 @@ class User < ActiveRecord::Base
 
   # Reminder emails
 
-  def self.check_and_send_archive
+  #def self.check_and_send_archive
     # should be sent on following dates
     # reminder_archive - sent nov 27th, jan 16, march 7
-    date1 = Date.new(2013, 11, 27)
-    date2 = Date.new(2014, 1, 16)
-    date3 = Date.new(2014, 3, 7)
+    #date1 = Date.new(2013, 11, 27)
+    #date2 = Date.new(2014, 1, 16)
+    #date3 = Date.new(2014, 3, 7)
 
     # check if we are on one of the require days
     # send the email to the users who have opted in
-    if date1.today? || date2.today? || date3.today?
-      users = self.suitable_for_reminders
-      users.each do |user|
-        UserMailer.archive_email(user).deliver
-      end
-    end
-  end
+    #if date1.today? || date2.today? || date3.today?
+     # users = self.suitable_for_reminders
+      #users.each do |user|
+      #  UserMailer.archive_email(user).deliver
+      #end
+    #end
+ # end
 
   def self.check_and_send_evaluation
     # should be sent on following dates
