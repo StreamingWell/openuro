@@ -74,11 +74,5 @@ module Openmicrosite
     }
 
     config.action_mailer.default_url_options = { :host => "warm-dawn-9465.herokuapp.com" }
-
-    # We use a cookie_store for session data
-    config.session_store :cookie_store,
-                         :key => '_astellasoncologysession',
-                         :domain => :all
-
   end
 end
