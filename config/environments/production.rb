@@ -70,4 +70,6 @@ Openmicrosite::Application.configure do
 
   # replace this with your tracker code
   GA.tracker = "UA-45833954-1"
+
+  config.middleware.use "CustomDomainCookie", ".astellasoncology.co.uk"
 end
