@@ -3,5 +3,5 @@
 require ::File.expand_path('../config/environment',  __FILE__)
 run Openmicrosite::Application
 
-require 'rack/iframe
+require 'rack/iframe'
 use Rack::Iframe
