@@ -4,7 +4,7 @@ Openmicrosite::Application.routes.draw do
   root :to => 'pages#preregistration'
 
   # Authentication
-  devise_for :admins
+  #devise_for :admins
   devise_for :users
 
   # Static pages
