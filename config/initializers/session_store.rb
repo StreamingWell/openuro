@@ -1,6 +1,6 @@
 # Be sure to restart your server when you modify this file.
 
-Openmicrosite::Application.config.session_store :cookie_store, key: '_astellasoncology_session', :domain => "warm-dawn-9465.herokuapp.com"
+Openmicrosite::Application.config.session_store :cookie_store, key: '_astellasoncology_session'
 
 # Use the database for sessions instead of the cookie-based default,
 # which shouldn't be used to store highly confidential information
