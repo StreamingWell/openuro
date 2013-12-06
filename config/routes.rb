@@ -16,7 +16,7 @@ Openmicrosite::Application.routes.draw do
   get 'holding' => 'pages#holding'
   get 'login' => 'pages#login'
   get 'evaluation' => 'pages#evaluation'
-  get 'troubleshooting' => 'pages#troubleshooting'
+  get 'help' => 'pages#help'
   # get 'pi' => 'pages#pi'
 
   # Feedback/submissions
