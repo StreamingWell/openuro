@@ -7,7 +7,6 @@ gem 'simple_form'
 gem 'newrelic_rpm'
 gem 'thin'
 gem 'google-analytics-rails'
-gem 'rack-iframe'
 
 group :production do
 	gem 'pg'
