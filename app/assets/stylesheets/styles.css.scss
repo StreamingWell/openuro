@@ -359,6 +359,14 @@ abbr[title], abbr[data-original-title] {
 
 }
 
+.marketing-help {
+    text-align: left;
+    margin-left: 150px;
+    margin-right:100px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+}
+
 #message_body {
     max-width: 80%;
 }
@@ -515,3 +523,20 @@ input.radio_buttons.required {
     color: rgb(70, 136, 71);
     margin-top: 15px;
 }
+
+.tab { 
+    text-indent:40px 
+}
+
+.hero-unit {
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 30px;
+    color: inherit;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: -40px;
+    text-align: left;
+    background-color: #fff;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}   
