@@ -11,7 +11,7 @@ Openmicrosite::Application.routes.draw do
   get 'home' => 'pages#archive'
   get 'live' => 'pages#live'
   get 'live-jan-15' => 'pages#live-jan-15'
-  get 'live-mar-6' => 'pages#live-mar-6'
+  get 'live_mar_6' => 'pages#live_mar_6'
   get 'archive' => 'pages#archive'
   get 'holding' => 'pages#holding'
   get 'login' => 'pages#login'

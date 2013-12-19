@@ -14,11 +14,15 @@
             <li>
               <%= link_to "Home", root_path %>
             </li>
+
     				<!-- <li>
     					<a href= "http://xtandi.s3.amazonaws.com/XTANDI%20PI.pdf", target="_blank">Prescribing Information</a>
     				</li> -->
             <li>
               <a href="https://s3.amazonaws.com/streamingwell/Xtandi+PI.pdf", target="_blank">Prescribing Information</a>
+            </li>
+            <li>
+              <%= link_to "Help Centre", help_path %>
             </li>
             <li><a href="mailto:rummy.ladwa@succinctcomms.com">Contact Us</a> </li>
             <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
@@ -29,6 +33,7 @@
           <ul class="nav">
             <li><%= link_to "Register", new_user_registration_path %></li>
             <li><%= link_to "Login", login_path %></li>
+            <li><%= link_to "Help Centre", help_path %></li>
             <li><%= link_to 'Forgot your password?', new_password_path(resource_name) %></li>
           </ul>
         </div>
