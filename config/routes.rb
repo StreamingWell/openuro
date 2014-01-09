@@ -3,6 +3,9 @@ Openmicrosite::Application.routes.draw do
   # Home
   root :to => 'pages#preregistration'
 
+  # Live Webinar
+  #root :to => 'pages#live'
+
   # Authentication
   devise_for :admins
   devise_for :users

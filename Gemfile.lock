@@ -71,6 +71,8 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    metamagic (2.0.6)
+      rails (>= 3.0.0)
     mime-types (1.24)
     multi_json (1.7.9)
     newrelic_rpm (3.6.6.147)
@@ -150,6 +152,7 @@ DEPENDENCIES
   google-analytics-rails
   jquery-rails
   letter_opener
+  metamagic
   newrelic_rpm
   pg
   quiet_assets

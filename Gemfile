@@ -7,6 +7,7 @@ gem 'simple_form'
 gem 'newrelic_rpm'
 gem 'thin'
 gem 'google-analytics-rails'
+gem 'metamagic'
 
 group :production do
 	gem 'pg'
