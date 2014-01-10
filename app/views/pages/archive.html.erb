@@ -27,8 +27,8 @@
           <div id="collapseOne" class="accordion-body collapse in">
             <div class="accordion-inner">
 
-              <!-- <iframe width="640" height="360" src="//www.youtube.com/embed/qeYthltbbAw" frameborder="0" allowfullscreen></iframe> -->
-              <img src="assets/archived-webcast.png"/>
+              <iframe src="//player.vimeo.com/video/82390520" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+              <!-- <img src="assets/archived-webcast.png"/> -->
                 <%= link_to "Leave Feedback", evaluation_path, class: "btn btn-danger" %>
 
             </br>
@@ -102,77 +102,7 @@
 
 <% else %>
 
-    <!-- flash_notice to show if form submission is unsuccessful -->
-    <!-- <div class="alert alert-error" id="form-error" style="display: none;">
-        <strong>Please fill in all fields and confirm that you are a healthcare professional. These webinars are intended for healthcare professionals only.</strong>
-    </div> -->
-
-<div class="jumbotron" style="padding: 20px 72px 20px 68px;">
-     <%= render 'layouts/title' %>
-
-
-  <br>
-  <h4>To register for this webinar series <br>please complete the following information:</h4>
-<div class="login span6 offset2">
-
-
-    <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { class: 'form-horizontal'}) do |f| %>
-
-          <p>Are you a healthcare professional? Please select either yes or no:</p>
-
-          <div class="marketing">
-             <button type="button" class="btn btn-primary btn-large" data-toggle="collapse" data-target="#demo">Yes</button>
-                         <!-- Button trigger modal -->
-            <a data-toggle="modal" href="#myModal" class="btn btn-danger btn-large">No</a>
-          </div>
-
-          <br></br>
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-body">
-          <h4><span style="color: rgb(167, 43, 77)">Unfortunately as you are not a healthcare professional you are not permitted to view these webinars.</span></h4>
-        </div>
-        <div class="modal-footer">
-          <%= link_to "Close", archive_path %>
-        </div>
-      </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-  </div><!-- /.modal -->
-                 <div id="demo" class="collapse out">
-                    <%= f.input :name, :autofocus => true, label: "Name:" %>
-                    <%= f.input :email, :autofocus => true, label: "Work email address:"%>
-                    <%= f.input :company, :autofocus => true, label: "Place of work:" %>
-                    <%= f.input :job, :autofocus => true, label: "Job title:" %>
-                    <%= f.input :password, label: "Password:" %>
-                    <%= f.input :password_confirmation, label: "Password confirmation:" %>
-
-              <div class="login">
-
-                <p>Please tick this box if you permit Astellas Oncology to send you two reminder emails prior to each live webinar, an email when each webinar is archived for viewing on the website and an email when a new webinar is added to the programme.</p>
-                    <%= f.input :reminder, :as => :boolean, :label => "Accept", :input_html => { :checked => "unchecked", style: "margin-left: 23px; margin-top: 8px;" } %>
-
-                <p>Please tick this box if you permit Astellas Oncology to contact you in the future regarding other similar activities.</p>
-                    <%= f.input :future, :as => :boolean, :label => "Accept", :input_html => { :checked => "unchecked", style: "margin-left: 23px; margin-top: 8px;" } %>
-
-                <br>
-
-                <p>Once you have registered, a confirmation email will be sent to you.</p>
-
-                <div class="marketing">
-                  <%= f.button :submit, "Submit", class: 'btn btn-primary btn-large' %>
-                </div>
-                <br>
-          </div>
-
-      </div>
-
-
-  </div>
-
-<% end %>
-</div>
+<%= render 'layouts/preregistration' %>
 
 <% end %>
 
