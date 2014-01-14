@@ -21,7 +21,7 @@ class User < ActiveRecord::Base
   def self.check_and_send_archive
     # should be sent on following dates
     # reminder_archive - sent nov 27th, jan 16, march 7
-    date1 = Date.new(2013, 11, 27)
+    date1 = Date.new(2014, 1, 14)
     date2 = Date.new(2014, 1, 31)
     date3 = Date.new(2014, 3, 31)
 
@@ -56,7 +56,7 @@ class User < ActiveRecord::Base
     # should be sent on the following dates
     # reminder_one_day - sent on nov 25th, jan 14, march 5
     date1 = Date.new(2013, 11, 25)
-    date2 = Date.new(2014, 1, 14)
+    date2 = Date.new(2014, 1, 13)
     date3 = Date.new(2014, 3, 5)
 
     if date1.today? || date2.today? || date3.today?
