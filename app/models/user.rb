@@ -35,22 +35,22 @@ class User < ActiveRecord::Base
     end
   end
 
-  def self.check_and_send_evaluation
+  # def self.check_and_send_evaluation
     # should be sent on following dates
     # reminder_evaluation - sent nov 28th, jan 17, march 8
-    date1 = Date.new(2013, 11, 28)
-    date2 = Date.new(2014, 1, 17)
-    date3 = Date.new(2014, 3, 8)
+    # date1 = Date.new(2013, 11, 28)
+    # date2 = Date.new(2014, 1, 17)
+    # date3 = Date.new(2014, 3, 8)
 
     # check if we are on one of the require days
     # send the email to the users who have opted in
-    if date1.today? || date2.today? || date3.today?
-      users = self.suitable_for_reminders
-      users.each do |user|
-        UserMailer.evaluation_email(user).deliver
-      end
-    end
-  end
+    # if date1.today? || date2.today? || date3.today?
+     # users = self.suitable_for_reminders
+      #users.each do |user|
+       # UserMailer.evaluation_email(user).deliver
+      #end
+    #end
+  #end
 
   def self.check_and_send_one_day_reminders
     # should be sent on the following dates
