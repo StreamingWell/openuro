@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
 
   # remove this before deploying to production
-  # before_filter :authenticate
+   before_filter :authenticate
 
   def home
   end
