@@ -173,14 +173,13 @@
         <strong>Please fill in all fields and confirm that you are a healthcare professional. These webinars are intended for healthcare professionals only.</strong>
     </div> -->
 
-<div class="jumbotron" style="padding: 20px 72px 20px 68px;">
-     <%= render 'layouts/title' %>
-
-
+<div class="jumbotron">
+  <%= render 'layouts/title' %>
   <br>
   <br>
     <h4>To register for this webinar series please complete the following information:</h4>
-<div class="login span6">
+  
+  <div class="col-sm-6 col-sm-offset-3">
 
     <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { class: 'form-horizontal'}) do |f| %>
 

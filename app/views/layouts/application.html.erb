@@ -12,7 +12,6 @@
     <%= analytics_init if Rails.env.production? %>
   </head>
   <body>
-    <div class="container">
       <%= render 'layouts/header' %>
       <%= render 'layouts/messages' %>
       <%= yield %>
@@ -27,6 +26,5 @@
 
       <% end %>
       
-    </div>
   </body>
 </html>
