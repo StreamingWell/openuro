@@ -11,6 +11,15 @@ body {
    color: #706F6F;
    height: 100%;
 }
+a {
+    color: #CC0767;
+}
+
+hr {
+    color: #CC0767;
+}
+
+/* Navbar */
 
 .navbar-default {
     background-color: #00365C;
@@ -29,12 +38,19 @@ body {
     color: #fff;
 }
 
-a {
-    color: #CC0767;
+.navbar-default .navbar-toggle {
+    border: none;
 }
 
-hr {
-    color: #CC0767;
+.navbar-toggle {
+    position: relative;
+    float: right;
+    margin-right: 15px;
+    padding: 9px 10px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    background-color: transparent;
+    background-image: none;
 }
 
 .btn {
