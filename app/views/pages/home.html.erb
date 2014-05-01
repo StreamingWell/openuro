@@ -179,7 +179,7 @@
   <br>
     <h4>To register for this webinar series please complete the following information:</h4>
   
-  <div class="col-sm-6 col-sm-offset-3">
+  <div class="col-sm-6 col-sm-offset-3 well">
 
     <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { class: 'form-horizontal'}) do |f| %>
 
@@ -217,7 +217,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-body">
-          <h4><span style="color: rgb(167, 43, 77)">Unfortunately as you are not a healthcare professional you are not permitted to view these webinars.</span></h4>
+          <h4>Unfortunately as you are not a healthcare professional you are not permitted to view these webinars.</h4>
         </div>
         <div class="modal-footer">
           <%= link_to "Please click here to close the web page", "http://astellas.eu", class: 'btn btn-primary btn-large' %>

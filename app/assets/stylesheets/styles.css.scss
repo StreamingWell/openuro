@@ -9,6 +9,7 @@ $btnPrimaryBackground: purple;
 body {
    font-family: 'Roboto', sans-serif;
    color: #706F6F;
+   height: 100%;
 }
 
 .navbar-default {
@@ -32,6 +33,26 @@ a {
     color: #CC0767;
 }
 
+hr {
+    color: #CC0767;
+}
+
+.btn {
+    display: inline-block;
+    margin-bottom: 0px;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 12px 40px;
+    font-size: 18px;
+    line-height: 1.42857;
+    border-radius: 4px;
+    -moz-user-select: none;
+}
 
 .btn-danger {
     color: #FFF;
@@ -40,6 +61,12 @@ a {
 }
 
 .btn-danger:hover {
+    color: #FFF;
+    background-color: #00365C;
+    border-color: #00365C;
+}
+
+.btn-danger:focus {
     color: #FFF;
     background-color: #00365C;
     border-color: #00365C;
@@ -57,11 +84,20 @@ a {
     border-color: #CC0767;
 }
 
+.btn-primary:focus {
+    color: #FFF;
+    background-color: #CC0767;
+    border-color: #CC0767;
+}
+
 .jumbotron {
     background-color: transparent;
     color: #00365C;
     width: 100%;
     z-index: 100%;
+    padding: 30px;
+    margin-bottom: 30px;
+    margin-top: -100px;
 }
 
 .jumbotron h1 {
@@ -77,6 +113,7 @@ a {
     right: 0px;
     bottom: 0px;
     background: none no-repeat scroll 50% 50% / cover transparent;
+    z-index: 1;
 }
 
 .header-10-sub.v-center, .header-10-sub .v-center {
@@ -91,6 +128,14 @@ a {
 
 .header-10-sub .background {
     background-image: url('astellas-uro-large.png');
+}
+
+.intro-header {
+    padding-top: 100px;
+    padding-bottom: 120px;
+    margin-bottom: 50px;
+    height: 100%;
+    background: url('astellas-bg.gif') no-repeat scroll center center / cover transparent;
 }
 
 
@@ -115,7 +160,9 @@ body {
 
 /* Set the fixed height of the footer here */
 #footer {
-  height: 60px;
-  background-color: #fff;
+  padding-top: 100px;
+  height: 40px;
+  color: #706F6F;
+  width: 100%;
   text-align: center;
 }
