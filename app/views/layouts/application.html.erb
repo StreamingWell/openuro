@@ -13,11 +13,14 @@
   </head>
   <body>
       <div class="intro-header">
+        <div class="container">
+
         <%= render 'layouts/header' %>
         <%= render 'layouts/messages' %>
         <%= yield %>
       </div>
-      
+          </div>
+
       <% if user_signed_in? %>
 
       <%= render 'layouts/footer' %>
