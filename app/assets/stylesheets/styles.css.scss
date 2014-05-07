@@ -12,9 +12,12 @@ body {
    color: #706F6F;
    height: 100%;
 }
+
 a {
     color: #CC0767;
 }
+
+
 
 hr {
     -moz-border-top-colors: none;
@@ -30,7 +33,7 @@ hr {
 
 .navbar-default {
     background-color: #00365C;
-    border-color: none;
+    border-color: #00365C;
 }
 
 .navbar-default .navbar-nav > li > a {
@@ -129,7 +132,11 @@ hr {
 
 .jumbotron h1 {
     font-weight: 300;
-    font-size: 50px;
+    font-size: 40px;
+}
+
+.jumbotron p {
+    font-size: 16px;
 }
 
 /* Background Image
@@ -166,7 +173,7 @@ body {
 
 /* Set the fixed height of the footer here */
 #footer {
-  padding-top: 0px;
+  padding-top: 25px;
   padding-bottom: 200px;
   margin-bottom: 25px;
   height: 40px;
@@ -218,9 +225,17 @@ body {
     border-top-left-radius: 3px;
 }
 
+.form-horizontal .control-label {
+text-align: left;
+margin-bottom: 0;
+padding-top: 7px;
+font-size: 12px;
+font-weight: 400;
+}
+
 .glyphicon-lg{font-size:3em}
-.blockquote-box{border-right:0px solid #E6E6E6;margin-bottom:25px; padding: 25px; background-color: #fff;}
-.blockquote-box .square{width:150px;min-height:50px;margin-right:72px;text-align:left!important;}
+.blockquote-box{border-right:0px solid #E6E6E6;margin-bottom:25px; padding: 25px 25px 50px 25px; background-color: #fff;}
+.blockquote-box .square{width:100px;min-height:50px;margin-right:72px;text-align:left!important;}
 .blockquote-box.blockquote-primary{border-color:#357EBD}
 .blockquote-box.blockquote-primary .square{background-color:#428BCA;color:#FFF}
 .blockquote-box.blockquote-success{border-color:#4CAE4C}

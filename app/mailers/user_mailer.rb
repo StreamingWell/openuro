@@ -1,30 +1,30 @@
 class UserMailer < ActionMailer::Base
-  default :from => "noreply@astellasoncology.co.uk"
+  default :from => "noreply@astellasurology.co.uk"
   layout 'mail'
 
   def welcome(user)
     @user = user
-    mail(subject: 'Log-in details for the Prostate Cancer Lunchtime Webinars', to: user.email)
+    mail(subject: 'Log-in details for the Urology Lunchtime Webinar', to: user.email)
   end
 
   def reminder_one_day(user)
     @user = user
-    mail(subject: "Reminder re tomorrow's Prostate Cancer Lunchtime Webinar", to: user.email)
+    mail(subject: "Reminder re tomorrow's Urology Lunchtime Webinar", to: user.email)
   end
 
   def reminder_two_week(user)
     @user = user
-    mail(subject: 'Reminder re the Prostate Cancer Lunchtime Webinar on March 6th 2014', to: user.email)
+    mail(subject: 'Reminder re the Urology Lunchtime Webinar on July 1st 2014', to: user.email)
   end
 
   def archive_email(user)
     @user = user
-    mail(subject: 'Notification that a recent Prostate Cancer Lunchtime Webinar is now available to view', to: user.email)
+    mail(subject: 'Notification that a recent Urology Lunchtime Webinar is now available to view', to: user.email)
   end
 
   def evaluation_email(user)
     @user = user
-    mail(subject: 'Feedback re the Prostate Cancer Lunchtime Webinar', to: user.email)
+    mail(subject: 'Feedback re the Urology Lunchtime Webinar', to: user.email)
   end
 
 end

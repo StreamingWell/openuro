@@ -66,7 +66,7 @@ Openmicrosite::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
   # In production, :host should be set to the actual host of your application.
-  config.action_mailer.default_url_options = { :host => 'warm-dawn-9465.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'intense-bayou-2347.herokuapp.com' }
 
   # replace this with your tracker code
   GA.tracker = "UA-45833954-1"
