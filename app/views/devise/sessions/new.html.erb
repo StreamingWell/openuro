@@ -1,11 +1,9 @@
 <div class="jumbotron">
 	<%= render 'layouts/title' %>
-	<br />
-
-		<div class="col-md-6">
-			<div class="panel panel-default">
-		 		 <div class="panel-heading"><h3 class="panel-title"><strong>Log in</strong></h3></div>
-		  			<div class="panel-body">
+		<div class="col-md-6 col-md-offset-3">
+			<!-- <div class="panel panel-default"> -->
+		 		 <!-- <div class="panel-heading"><h3 class="panel-title"><strong>Log in</strong></h3></div> -->
+		  			<!-- <div class="panel-body"> -->
 						<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), html: { class: 'form-horizontal'}) do |f| %>
 				    	<%= f.input :email, :autofocus => true, label: "Email Address" %>
 				    	<%= f.input :password %>
