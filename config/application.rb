@@ -55,7 +55,8 @@ module Openmicrosite
 
     # Enable the asset pipeline
     config.assets.enabled = true
-
+    config.assets.paths << "#{Rails.root}/app/assets/fonts" 
+    
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 
@@ -73,6 +74,6 @@ module Openmicrosite
       :enable_starttls_auto => true
     }
 
-    config.action_mailer.default_url_options = { :host => "warm-dawn-9465.herokuapp.com" }
+    config.action_mailer.default_url_options = { :host => "intense-bayou-2347.herokuapp.com" }
   end
 end

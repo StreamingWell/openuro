@@ -1,35 +1,27 @@
 <% if user_signed_in? %>
 
-<div class="jumbotron">
+<div class="jumbotron col-md-10 col-md-offset-1">
   <%= render 'layouts/title' %>
-  <h3>4th July 2014 12.45pm – 1.15pm</h3>
-</div>
-<br />
-  <div class="jumbotron">
+
   <div class="row">
-      <div class="blockquote-box clearfix col-md-8">
-        <p style="font-size: 20px;">Join Professor Marcus Drake, Consultant Urological Surgeon from Southmead Hospital, Bristol to discuss optimal management of LUTS in primary care. Professor Drake will review a consensus statement  formulated by a group of urologists and GPs in order to provide clear guidance on the management of male LUTS in primary care in line with current NICE guidance.</p>
-        <br/>
-        <div class="square pull-left">
-          <img src="assets/man.png" alt="" class="" />
-        </div>
-          <p style="font-size: 20px;">Professor Drake will also introduce Vesomni™, a new option where combination therapy is indicated in male LUTS patients with moderate to severe storage symptoms associated with BPH who do not respond adequately to treatment with monotherapy.</p>
-          <br />
-          <%= link_to "Live Webcast", "#", class: "btn btn-primary" %>
+    <div class="blockquote-box clearfix col-md-10">
+      <h3>4th July 2014 12.45pm – 1.15pm</h3>
+      <br />
+      <p style="font-size: 20px;">Join Professor Marcus Drake, Consultant Urological Surgeon from Southmead Hospital, Bristol to discuss optimal management of LUTS in primary care. Professor Drake will review a consensus statement  formulated by a group of urologists and GPs in order to provide clear guidance on the management of male LUTS in primary care in line with current NICE guidance.</p>
+      <br/>
+      <div class="square pull-left">
+        <img src="assets/marcus-drake.png" alt="" class="" />
+      </div>
+        <p style="font-size: 20px;">Professor Drake will also introduce Vesomni™, a new option where combination therapy is indicated in male LUTS patients with moderate to severe storage symptoms associated with BPH who do not respond adequately to treatment with monotherapy.</p>
+        <br />
+        <div class="marketing" align="center" style="margin-top: 15px;">
+          <%= link_to "Live Webcast", live_path, class: "btn btn-primary" %>
           <%= link_to "Archived Webcast", archive_path, class: "btn btn-danger" %> 
         </div>
       </div>
+    </div>
   </div>
-
-
-   
-    
-
-    
-</div>
-  </div>
-</div >
 
 <% else %>
-      <%= render 'layouts/preregistration' %>
+  <%= render 'layouts/preregistration' %>
 <% end %>

@@ -2,48 +2,37 @@
 
 <div class="jumbotron">
 	<%= render 'layouts/title' %>
-	
-	
-	<!-- <iframe width="640" height="385" src="http://cdn.livestream.com/embed/streamingwell?layout=4&color=0xe7e7e7&autoPlay=false&mute=false&iconColorOver=0x888888&iconColor=0x777777&allowchat=true&height=385&width=640" style="border:0;outline:0" frameborder="0" scrolling="no"></iframe> -->
 
-	<!-- <iframe src='https://onedrive.live.com/embed?cid=BD91A92493CDDFE6&resid=BD91A92493CDDFE6%21127&authkey=AFi5CRoMEiaRU14&em=2&wdAr=1.7768762677484786' width='750px' height='442px' frameborder='0'>This is an embedded <a target='_blank' href='http://office.com'>Microsoft Office</a> presentation, powered by <a target='_blank' href='http://office.com/webapps'>Office Online</a>.</iframe> -->
-	<!-- <iframe src="https://docs.google.com/a/streamingwell.com/file/d/0B78ASFGuVVw0bmdNUi1sZEp6ZUk" width="640" height="480"></iframe> -->
-	</div>
-	<br />
-	<div class="jumbotron col-md-12" align="center">
-		<p>Professor Marcus Drake, Consultant Urological Surgeon, Southmead Hospital, Bristol</p>
+  <div class="row">
+    <div class="blockquote-box clearfix col-md-10 col-md-offset-1" align="center">
+    	
+    	<h3>Professor Marcus Drake, <br />Consultant Urological Surgeon, Southmead Hospital, Bristol</h3>
+      	<h3 style="color:#CC0767">Friday 1<sup>st</sup> July 2014 at 12.30-13.15</h3>
+      	<h5>*This session will include a discussion regarding the Vesomni™ clinical data.</h5>
 
-	<h3>Friday 1<sup>st</sup> July 2014 at 12.30-13.15</h3>
-	<h6>*This session will include a discussion regarding the Vesomni™ clinical data.</h6>
-		<img src="assets/webcast.png"/>
-		<br />
-		<hr>
-	<div class="jumbotron col-md-12" align="center">
-		<!-- flash_notice to show if form submission is successful -->
-		<div class="alert alert-success" id="form-success" style="display: none;">
+    	<img src="assets/webcast.png" class="img-responsive"/>
+
+	    <!-- flash_notice to show if form submission is successful -->
+		<div class="alert alert-success" id="form-success" style="display: none; margin-top: 15px; margin-bottom: 0px;">
 			<strong>Thank you, your question was successfully sent.</strong>
 		</div>
 		<!-- flash_notice to show if form submission is unsuccessful -->
-		<div class="alert alert-error" id="form-error" style="display: none;">
+		<div class="alert alert-error" id="form-error" style="display: none; margin-top: 15px; margin-bottom: 0px;">
 			<strong>Please fill in all fields.</strong>
 		</div>
-
-			<h4>Please submit a question in the box below:</h4>
-			
-
-				<%= simple_form_for @message, :url => contact_path, method: :post, remote: true, html: { class: "form-horizontal"} do |form| %>
-
-			  	<%= form.input :body, label: 'Question', required: false, as: :text, input_html: { rows: "3" } %>
-			  	<br />
-				<%= form.submit "Send", class: 'btn btn-primary btn-large' %>
-			<% end %>
+      	<%= simple_form_for @message, :url => contact_path, method: :post, remote: true, html: { class: "form-horizontal"} do |form| %>
+      	<br />
+		<%= form.input :body, label: "Please submit a question in the box below:", required: false, as: :text, input_html: { rows: "3" } %>
+		<br />
+		<%= form.submit "Send", class: 'btn btn-primary btn-large' %>
+		<% end %>
 
 		<h5>Please note, each webinar will last up to 45 minutes and will be available<br> to view at a later date, by registered users.</h5>
-	</div>
-	</div>
+		<br /> 
+      </div>
+    </div>
+  </div>
 
 <% else %>
-
-    <%= render 'layouts/preregistration' %>
-
+  <%= render 'layouts/preregistration' %>
 <% end %>

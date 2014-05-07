@@ -5,6 +5,7 @@ $navbarBackground: white;
 $btnPrimaryBackground: purple;
 
 @import 'bootstrap';
+
    
 body {
    font-family: 'Roboto', sans-serif;
@@ -37,6 +38,10 @@ hr {
 }
 
 .navbar-default .navbar-nav > li > a:hover {
+    color: #CC0767;
+}
+
+.navbar-default .navbar-nav > li > a:focus {
     color: #CC0767;
 }
 
@@ -135,8 +140,8 @@ hr {
     padding-bottom: 120px;
     margin-bottom: 50px;
     height: 100%;
-    background: url('astellas-bg.gif') no-repeat scroll center center / cover transparent;
-    border-style: none;
+    background: url('https://s3.amazonaws.com/streamingwell/astellas-bg.gif') no-repeat scroll center center / cover transparent;
+    border-bottom: none;
 }
 
 
@@ -163,6 +168,7 @@ body {
 #footer {
   padding-top: 0px;
   padding-bottom: 200px;
+  margin-bottom: 25px;
   height: 40px;
   color: #706F6F;
   width: 100%;
@@ -214,7 +220,7 @@ body {
 
 .glyphicon-lg{font-size:3em}
 .blockquote-box{border-right:0px solid #E6E6E6;margin-bottom:25px; padding: 25px; background-color: #fff;}
-.blockquote-box .square{width:100px;min-height:50px;margin-right:72px;text-align:left!important;}
+.blockquote-box .square{width:150px;min-height:50px;margin-right:72px;text-align:left!important;}
 .blockquote-box.blockquote-primary{border-color:#357EBD}
 .blockquote-box.blockquote-primary .square{background-color:#428BCA;color:#FFF}
 .blockquote-box.blockquote-success{border-color:#4CAE4C}
