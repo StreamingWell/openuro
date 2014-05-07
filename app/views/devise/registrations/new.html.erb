@@ -9,13 +9,12 @@
 
   <div class="jumbotron">
       <%= render 'layouts/title' %>
-      <br>
-      <div class="blockquote-box clearfix col-md-8">
+      <div class="blockquote-box clearfix col-md-6 col-md-offset-3" style="padding-bottom: 10px;">
       <h5>To register for this webinar please complete the following information:</h5>
         <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { class: 'form-horizontal'}) do |f| %>
           <p>Are you a healthcare professional? Please select either yes or no:</p>
 
-          <div class="marketing">
+          <div class="marketing" align="center">
              <button type="button" class="btn btn-primary btn-large" data-toggle="collapse" data-target="#demo">Yes</button>
              <!-- Button trigger modal -->
             <a data-toggle="modal" href="#myModal" class="btn btn-danger btn-large">No</a>
@@ -37,7 +36,7 @@
                   <%= f.input :future, :as => :boolean, :label => "Accept", :input_html => { :checked => "unchecked", style: "margin-left: 50px; margin-top: -22px;" } %>
               <br>
               <p>Once you have registered, a confirmation email will be sent to you.</p>
-              <div class="marketing">
+              <div class="marketing" align="center">
                 <%= f.button :submit, "Submit", class: 'btn btn-primary btn-large' %>
               </div>
               <br>
