@@ -4,7 +4,7 @@ class UserMailer < ActionMailer::Base
 
   def welcome(user)
     @user = user
-    mail(subject: 'Log-in details for the Urology Lunchtime Webinar', to: user.email)
+    mail(subject: "Log-in details for the Urology Lunchtime Webinar", to: user.email)
   end
 
   def reminder_one_day(user)
@@ -14,7 +14,7 @@ class UserMailer < ActionMailer::Base
 
   def reminder_two_week(user)
     @user = user
-    mail(subject: 'Reminder re the Urology Lunchtime Webinar on July 1st 2014', to: user.email)
+    mail(subject: 'Reminder re the Urology Lunchtime Webinar on July 4th 2014', to: user.email)
   end
 
   def archive_email(user)
