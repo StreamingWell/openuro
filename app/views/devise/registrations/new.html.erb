@@ -9,10 +9,12 @@
 
   <div class="jumbotron">
       <%= render 'layouts/title' %>
-      <div class="blockquote-box clearfix col-md-8 col-md-offset-2" style="padding-bottom: 10px;">
-      <h5>To register for this webinar please complete the following information:</h5>
+      
+
+      <div class="blockquote-box clearfix col-md-10 col-md-offset-1" style="padding-bottom: 10px;">
+      <h5 style="text-align:center;">To register for this webinar please complete the following information:</h5>
         <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { class: 'form-horizontal'}) do |f| %>
-          <p>Are you a healthcare professional? Please select either yes or no:</p>
+          <p style="text-align:center;">Are you a healthcare professional? Please select either yes or no:</p>
 
           <div class="marketing" align="center">
              <button type="button" class="btn btn-primary btn-large" data-toggle="collapse" data-target="#demo">Yes</button>
@@ -22,7 +24,7 @@
 
           <br></br>
 
-          <div id="demo" class="collapse out">
+          <div id="demo" class="collapse out" style="margin-left: 80px;">
             <%= f.input :name, :autofocus => true, label: "Name:" %>
             <%= f.input :email, :autofocus => true, label: "Work email address:"%>
             <%= f.input :company, :autofocus => true, label: "Place of work:" %>
@@ -42,6 +44,11 @@
               <br>
         </div><!-- demo -->
         <% end %>
+
+        <br />
+      <br />
+      <%= render 'layouts/prefooter' %>
+
       </div><!-- login -->
 
 <!-- Modal to show if not a healthcare professional -->

@@ -3,7 +3,7 @@
 <div class="jumbotron">
   <%= render 'layouts/title' %>
 
-    <div class="blockquote-box clearfix col-md-10 col-md-offset-1" style="padding-bottom: 130px;">
+    <div class="blockquote-box clearfix col-md-10 col-md-offset-1" style="padding-bottom: 10px;">
       <h3>4th July 2014 12.30pm – 1.15pm</h3>
       <br />
       <p style="font-size: 18px;">Join Professor Marcus Drake, Consultant Urological Surgeon from Southmead Hospital, Bristol to discuss optimal management of LUTS/BPH in primary care. Professor Drake will review a consensus statement*  formulated by a group of urologists and GPs in order to provide clear guidance on the management of male LUTS in primary care in line with current NICE guidance.</p>
@@ -19,11 +19,16 @@
           <%= link_to "Archived Webcast", archive_path, class: "btn btn-danger" %> 
           <br />
         </div>
+
+        <br />
+        <br />
+
+        <%= render 'layouts/footer' %>
       </div>
       </div>
     </div>
 
-  <%= render 'layouts/footer' %>
+  
 
 <% else %>
   <%= render 'layouts/preregistration' %>
