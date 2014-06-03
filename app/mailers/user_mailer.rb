@@ -1,5 +1,5 @@
 class UserMailer < ActionMailer::Base
-  default :from => "noreply@astellasurology.co.uk"
+  default :from => "noreply@lutswebinar.co.uk"
   layout 'mail'
 
   def welcome(user)
