@@ -409,7 +409,7 @@
 													</div>
 													<div mc:edit="std_content00">
 
-														<p>Dear "Insert User Name",</p>
+														<p>Dear <%= @user.name %>,</p>
 
 														<p>Thank you for registering your interest in the Astellas Urology live webinar.</p>
 														<p>This is just a reminder that at 12.30 on Friday 4th July 2014, Professor Marcus Drake, Consultant Urological Surgeon from Southmead Hospital, Bristol shall be presenting a webinar entitled:</p>
@@ -423,11 +423,11 @@
 
 														<p>Please note you will be able to submit your questions via the website during the live broadcast.</p>
 
-														<p>To watch the webinar live, please login at <a href="#">www.astellasurology.co.uk</a>. Your log-in details are as follows:</p>
+														<p>To watch the webinar live, please login at <a href="http://www.lutswebinar.co.uk">www.astellasurology.co.uk</a>. Your log-in details are as follows:</p>
 
-														<p><strong>Username:</strong> "Insert User Email Address"
+														<p><strong>Username:</strong> <%= @user.email %>
 
-														<p><strong>Password:</strong> Your password was emailed to you when you first registered. If you have forgotten your password, please click <a href="#">here</a> to reset it.</p>
+														<p><strong>Password:</strong> Your password was emailed to you when you first registered. If you have forgotten your password, please click <a href="http://www.lutswebinar.co.uk/users/password/new">here</a> to reset it.</p>
 	
 
 														<p>We do hope that you will be able to join us and you <br />find the webinar interesting and informative.</p>
