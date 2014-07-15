@@ -14,6 +14,7 @@ Openmicrosite::Application.routes.draw do
   get 'home' => 'pages#archive'
   get 'live' => 'pages#live'
   get 'archive' => 'pages#archive'
+  get 'zinc' => 'pages#zinc'
   get 'holding' => 'pages#holding'
   get 'login' => 'pages#login'
   get 'evaluation' => 'pages#evaluation'

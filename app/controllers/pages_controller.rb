@@ -21,6 +21,9 @@ class PagesController < ApplicationController
   def archive
   end
 
+  def zinc
+  end
+
   def pi
   end
 
